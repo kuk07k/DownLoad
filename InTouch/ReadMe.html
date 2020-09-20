@@ -1,0 +1,3446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Wonderware System Platform Readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<style type="text/css">
+h1 {
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:18pt;
+	background-color:#009530;
+	margin-top:18pt
+	margin-bottom:6pt
+}
+
+h2 {
+	color:#000000;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:16pt;
+	margin-top:18pt
+	margin-bottom:6pt
+}
+
+h3 {
+	color:#000000;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12pt;
+	margin-bottom:6pt
+}
+
+h4 {
+	color:#000000;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:10pt;
+	margin-top:18pt
+	margin-bottom:6pt
+}
+
+h5 {
+	color:#000000;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:9pt;
+	margin-top:18pt
+	margin-bottom:6pt
+}
+
+h6 {
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:8pt;
+	background-color:#009530;
+	margin-top:18pt
+	margin-bottom:6pt
+}
+
+p {
+	margin-left:2px;
+	color:#000000;
+	font-family:Verdana;
+	font-size:12px;
+	margin-top:6pt;
+	margin-bottom:6pt;
+}
+
+p.right {
+	text-align:right;
+}
+
+/*Created a note style to make all of the notes consistent.*/
+p.note {
+	border-top: 2pt solid #009530;
+	border-bottom: 2pt solid #009530;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	margin-top:12pt;
+	margin-bottom:12pt;
+}
+
+ul {
+	margin-left:20px;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+ol {
+	margin-left:20px;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+td {
+	color:#000000;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+hr {
+	color:#FFFFFF;
+	width:100%;
+	height:1px;
+	font-family:Verdana;
+	font-size:12px;
+	text-align:right;
+}
+
+title {
+	color:#000000;
+	text-align:center;
+	font-family:Verdana;
+	font-size:22px;
+}
+
+li {
+	color:#000000;
+	list-style:inherit;
+	font-family:Verdana;
+	font-size:12px;
+	line-height:14pt;
+	margin-bottom:4pt;
+	margin-left:2px;
+}
+
+.center {
+	text-align:center;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.indent {
+	margin-left:.1in;
+	color:#000000;
+	font-family:Verdana;
+	font-size:12px;
+	margin-bottom:4pt;
+}
+
+.tab { margin-left: 40px; }
+
+/*Created the several td styles below to make it easier to apply and globally
+change table cell styles in the future.*/
+
+td.cell {
+	font-weight:normal;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.noborder {
+	background-color:#87D300;
+	font-weight:bold;
+	text-align:right;
+	vertical-align:middle;
+	border: 0;
+}
+
+td.cellLeft {
+	font-weight:normal;
+	text-align:left;
+	vertical-align:middle;
+}
+
+td.cellSmall {
+	font-weight:normal;
+	font-size:0.6em;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.supported {
+	background-color:#FFFFFF;
+	font-weight:normal;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.supportedRecommended {
+	background-color:#FFFF99;
+	font-weight:normal;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.smallsystemSmall {
+	background-color:#eaaf0f;
+	font-weight:normal;
+	font-size:0.8em;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.supportednot {
+	background-color:#FFC3AB;
+	font-weight:normal;
+	text-align:center;
+	vertical-align:middle;
+	color:#D81C3F;
+}
+
+td.supportedSmall {
+	background-color:#FFFFFF;
+	font-weight:normal;
+	font-size:0.8em;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.supportedRecommendedSmall {
+	background-color:#FFFF99;
+	font-weight:normal;
+	font-size:0.8em;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.supportedcompatible {
+	background-color:#99ccff;
+	font-weight:normal;
+	font-size:0.8em;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.supportedSubset {
+	background-color:#F5EF3B;
+	font-weight:normal;
+	font-size:0.8em;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.supportednotSmall {
+	background-color:#FFC3AB;
+	font-weight:normal;
+	font-size:0.8em;
+	text-align:center;
+	vertical-align:middle;
+	color:#D81C3F;
+}
+
+td.colhead {
+	background-color:#87D300;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:bottom;
+}
+
+td.colheadSmall {
+	background-color:#87D300;
+	font-weight:bold;
+	font-size:0.6em;
+	text-align:center;
+	vertical-align:bottom;
+}
+
+td.rowhead {
+	background-color:#87D300;
+	font-weight:bold;
+	text-align:left;
+	vertical-align:middle;
+}
+
+td.rowheadSmall {
+	background-color:#87D300;
+	font-weight:bold;
+	font-size:0.6em;
+	text-align:left;
+	vertical-align:middle;
+}
+
+td.gray {
+	background-color:#adafaf;
+	text-align:center;
+	font-size:0.8em;
+}
+
+td.graySmall {
+	background-color:#adafaf;
+	font-size:0.6em;
+	text-align:left;
+}
+
+</style>
+</head>
+
+<body style="" alink="#0000ff" bgcolor="#ffffff" link="#0000ff" vlink="#800080">
+<basefont size="12" face="verdana, arial, tahoma, helvetica">
+<!-- <p style="color: red; TEXT-ALIGN: center; font-size: 14pt">*** BETA DRAFT - NOT FOR EXTERNAL RELEASE ***</p> -->
+<h1 class="center">Wonderware System Platform 2014 R2 Service Pack 1 Readme</h1>
+
+	<p>Last revision: 2/3/2016</p>
+
+    <p>This document contains important information about Wonderware<sup>&reg;</sup> System Platform 2014 R2 Service Pack 1 (SP1), which includes the following products:</p>
+
+	<ul>
+		<li>Wonderware InTouch HMI 2014 (v11.1) R2 SP1</li>
+    	<li>Wonderware Application Server 2014 (v4.1) R2  SP1</li>
+		<li>Wonderware Historian Server 2014 R2 (v11.6) SP1</li>
+		<li>Wonderware Historian Client 2014 R2 (v10.6) SP1</li>
+		<li>Wonderware Information Server 2014 R2 (v5.6)</li>
+		<li>Wonderware InTouch Access Anywhere 2014 R2 (v11.1) SP1</li>
+	</ul>
+   
+	<p>Readme files from previous releases of Wonderware System Platform and its component products are posted on the <a href="http://softwaresupport.invensys.com/">Schneider Electric Software Global Customer Support (GCS)</a> website. Additional technical information about Wonderware System Platform is also available on the GCS website. For the latest updates related to supported operating systems and databases, see the <a href="https://gcsresource.invensys.com/ProductCompatibility/HTMLClient/#/BrowseProducts/[cd369a721]" target="_blank">GCS Product Compatibility Matrix</a>.  
+	<p>Use the following links to navigate this Readme file:</p>
+
+    <ul>
+
+		<li><a title="Click this link to view the information." href="#About_This_Release">Feature Enhancements in Wonderware System Platform 2014 R2 SP1</a></li>
+		<li><a title="Click this link to view the information." href="#System_Requirements">System Requirements and Guidelines</a></li>
+		<li><a title="Click this link to view the information." href="#Component_Compatibility">Wonderware Product Compatibility</a></li>
+		<li><a title="Click this link to view the information." href="#Installation_Notes">Wonderware System Platform Installation</a></li>
+		<li><a title="Click this link to view the information." href="#Upgrade_Migration">Wonderware System Platform Upgrade and Migration</a></li>	  
+		<li><a title="Click this link to view the information." href="#Licensing_Info">Licensing Information</a></li>
+		<li><a title="Click this link to view the information." href="#Antivirus_Software_Exclusions">Antivirus Information</a></li>
+		<li><a title="Click this link to view the information." href="#Resolved_Issues">Resolved Issues</a></li>
+		<li><a title="Click this link to view the information." href="#Known_Issues">Known Issues</a></li>
+		<li><a title="Click this link to view the information." href="#Documentation">Documentation</a></li>
+		<li><a title="Click this link to view the information." href="#ITAA_readme">Wonderware InTouch Access Anywhere</a></li>
+    </ul>
+
+    <p>Review each of the individual product Readme files for details regarding product-specific known and resolved issues. The Wonderware InTouch Access Anywhere Readme file is included at the end of this Readme. Insert the Wonderware System Platform installation DVD to access the following readme files:</p>
+    
+    <ul>
+		<li><a href="InstallFiles/CD-Intouch/Readme.html" target="_blank" title="InTouch">Wonderware
+        InTouch HMI Readme</a> </li>
+		<li><a href="InstallFiles/CD-ApplicationServer/Readme.html" target="_blank" title="Application Server">Wonderware Application Server Readme</a> </li>
+		<li><a href="InstallFiles/CD-Historian/Readme.html" target="_blank" title="Historian">Wonderware Historian Server Readme</a> </li>
+		<li><a href="InstallFiles/CD-HistorianClients/Readme.html" target="_blank" title="Historian Client">Wonderware Historian Client Readme</a> </li>
+		<li><a href="InstallFiles/CD-WIS/Readme.html" target="_blank" title="Information Server">Wonderware Information Server Readme</a></li>
+    </ul>
+
+<h1><a name="About_This_Release"></a>Feature Enhancements in Wonderware System Platform 2014 R2 Service Pack 1</h1>
+
+<h3 class="blue">Wonderware System Platform 2014 R2 SP1 - General Notes</h3>
+	
+<blockquote>
+<h4>Compatibility with New Versions of Microsoft Windows operating systems, the .NET Framework, and SQL Server</h4> 
+	<p>Wonderware System Platform 2014 R2 SP1 component products are able to run under new versions of Windows, including Windows 10, and are compatible with new versions of the .NET Framework and SQL Server. See the <a href="#OS_Reqs_Summary">Summary of Requirements</a> table and <a href="#SQL_Server_Reqs">SQL Server Requirements</a> for additional information.</p>
+		
+<h4>Expanded Support for Virtual Environments</h4>
+	<p>All Wonderware System Platform 2014 R2 Service Pack 1 products are able to run in vSphere/ESXi 6.0 and VMWare Workstation 11.x virtual environments, as well as the latest versions of Hyper-V. See the <a href="#OS_Reqs_Summary">Summary of Requirements</a> table for additional information.</p>
+	
+<h4>Enhanced Security</h4>
+	<p>A number of security enhancements have been included in this release of Wonderware System Platform and its component applications.</p>
+</blockquote>
+
+<h3 class="blue">Wonderware Application Server 2014 R2 SP1</h3>
+<blockquote>
+<!--
+<h4>GR on a Client Operating System Can Support Remote Nodes</h4>
+	<p>In prior releases, Application Server restricted Windows client operating systems (for example, Windows 7 or 8.1) to a single node installation in which all Wonderware System Platform products were installed on a single computer. That restriction is now relaxed. In Service Pack 1, up to five remote nodes can be supported by a GR node with any supported Windows client operating system. This means that Windows Server is only required if there is more than one GR node or if the GR node is connected to more than five remote nodes.-->
+<h4>Improved IT Compliance</h4>
+	<p>To increase IT security, Application Server no longer requires SysAdmin privileges for most SQL Server operations, including those related to creating, migrating, backing up, or restoring Galaxies. Certain operations that involve prior versions of Application Server will still require SysAdmin credentials. Examples of this include upgrading from a previous version of Application Server, or creating a Galaxy from a CAB file from another computer that uses an older Galaxy. See "Setting the SQL Server Security Mode" in the <em>Wonderware System Platform Installation Guide</em> for more information.
+<h4>Support for Running a GR Node Hosted on SQL Server Using a Non-Default Port</h4>
+	<p>The ability to use a non-default TCP/IP port to connect to a SQL Server database for GR nodes has been added to Application Server 2014 R2 SP1. To support this capability, the SQLData object  has a new configuration option. 
+<h4>Improved Stability During Failover of Redundant AppEngines</h4>
+	<p>A new AppEngine start-up algorithm prevents high CPU usage during failover of a redundant pair. CPU load balancing can be configured to ensure a smooth failover  process as the standby partner starts. See the <em>Wonderware Application Server User's Guide</em> for more information.
+<h4>Find Checked Out Objects Search Function</h4>
+	<p>The Application Server IDE has been enhanced with a new feature that allows users to easily find checked out objects. The <strong>Find</strong> dialog box now includes an option to search for checked out objects.
+</blockquote>
+
+	
+<h3 clas="blue">Wonderware InTouch HMI 2014 R2 SP1</h3>
+<blockquote>
+<h4>Support Input and Display of Number Formats by Regional Locale</h4>
+	<p>Numeric data can be entered and displayed in ArchestrA graphics in a format that matches the format of the country set as the regional locale on the computer running WindowViewer. During run time, numbers can be entered or displayed with a thousand separator and decimal point characters that match the number format of the selected country.
+	
+	<p>The InTouch WindowViewer keypad now includes comma, period, and a thin space keys to enter numbers that match the format of the country set as the regional locale on the computer running WindowViewer. In addition, if the <strong>WindowViewer Follow regional settings for ArchestrA Graphics</strong> configuration option is selected, the keypad displays numeric values using symbols based on the regional settings. </p>
+
+<h4>Export and Import Application Style Library Applied to ArchestrA Symbols in Modern Applications</h4>
+	<p>Users can export a Modern application's Application Style Library from WindowMaker to a designated folder location as an XML file. Users can also import the Application Style Library to a Modern application to reuse the Quality and Status display, the Element Styles, and numeric format styles that were defined in another Modern application.
+	
+<h4>Export ArchestrA Graphic Toolbox Symbols That Have Embedded Symbols from Automation Objects</h4>
+	<p>When exporting ArchestrA symbols from the Graphic Toolbox that have embedded symbols from automation objects in them, users see a dialog box with an option to export the associated objects hosting the graphics in the same operation. 
+
+<h4>Export Localization Strings of Selected Symbols in Modern Applications</h4>
+	<p>Symbols containing localized strings can be selected from WindowMaker's ArchestrA Graphic Toolbox to export the language strings to an XML file. Users can edit the XML file to translate the symbol strings and re-import to another set of symbols using Import ArchestrA Graphics option. 
+	
+	
+<h4>Export Selected Symbols from the ArchestrA Toolbox in Modern Applications</h4>
+	<p> Exporting and importing ArchestrA symbols in Modern applications have been enhanced in Service Pack 1. Rather than exporting or importing the entire set of Archestra symbols, now one or more selected symbols can be exported or imported.
+
+	<p>The selected ArchestrA symbols are exported to an .aaPKG file to a designated folder location. </p>
+
+<h4>Support for the Last History Statistic of the History Summary Data Type Custom Property</h4>
+	<p>A History Summary custom property can be added to a symbol that references historical data collected over a specified period during run time. The Historian can transform this data to create a set of analog or state summary statistics that can be shown by ArchestrA graphic animation during run time.
+
+	<p>In Service Pack 1, the analog Last historical statistic has been added to the History Summary custom property. The Last historical statistic shows the last data value that occurred in a historical summary period.
+	
+<h4>Include an Overridden Tag for Programmatic Symbol Exports</h4>
+	<p> A new XML attribute has been added to each symbol within the XML file containing ArchestrA symbols that have been programmatically exported. The attribute identifies whether changes have been made to the properties of the embedded symbols in a base symbol or not. This new Overridden attribute added to the exported XML file is essentially a "change flag".
+
+	<p>In Service Pack 1, an exported symbol that does not contain any changes to embedded symbol custom properties includes an Overridden attribute set to False, which is the default value.
+	<blockquote><code>
+    Overridden="False"</code>
+	</blockquote>
+
+	<p>The Overridden attribute makes it easier to programmatically identify symbols that have not been changed. 
+
+<h4>Installation Option to not Install a Galaxy Repository on the InTouch Development Computer</h4>
+	<p>In prior releases, the Wonderware System Platform installation program automatically installed SQL Server Express when an InTouch development environment was going to be installed on a computer without SQL Server. An instance of SQL Server Express was required as a Galaxy Repository to support InTouch Modern applications.
+
+    <p>In Service Pack 1, the installation program includes an option to not install SQL Server on the InTouch development computer. This option is provided for customers who do not intend to create Modern applications and do not need SQL Server installed on their development computer.
+</blockquote>
+
+<h3 class="blue">Wonderware Historian Server 2014 R2 SP1</h3>
+<blockquote>
+<h4>Replication to Wonderware Online</h4>
+	<p>In this Service Pack, Wonderware Historian Server supports replication to Wonderware Online, our Managed Historian solution. When you set up a Tier 2 server, you can configure it to point to Wonderware Online.
+	
+<h4>SQL Queries for Event Blocks</h4>
+	<p>Wonderware Historian Server 2014 R2 introduced the ability to store alarms and events in history event blocks. Block-based alarm and event history is more efficient both for storage space and retrieval time. You can choose to store events either in the traditional database structure (A2ALMDB) or to history blocks.  With Service Pack 1, you can use SQL queries on the new "Events" extension table with block-based alarm and event history. 
+
+<h4>Improved Retrieval for Slow-Changing Cyclically-Stored Tags</h4>
+	<p>In this Service Pack, Wonderware Historian Server includes retrieval improvements for slow-changing cyclically-stored tags that make data available for retrieval sooner. 
+</blockquote>
+	
+<h3 class="blue">Wonderware Historian Client 2014 R2 SP1</h3>
+<blockquote>
+<h4>Support for Different SQL Server Default Port Numbers</h4>
+	<p>If the default port for the SQL Server is changed, Historian Client can still connect to the server by specifying the new port number.
+	
+<h4>Improvements to Query and Workbook Tools Related to Optimistic Quality Rule</h4>
+	<p>Customers can use Query and Excel Workbook tools to retrieve data based on Optimistic quality rules.
+</blockquote>
+
+<h1><a name="System_Requirements"></a>System Requirements and Guidelines</h1>
+
+	<ul>
+		<li><a href="#Hardware_Requirements">Hardware Guidelines</a></li>
+		<li><a href="#OS_Reqs">Operating System, Firewall, .NET Framework, and Virtualization Requirements</a></li>
+		<li><a href="#SQL_Server_Reqs">SQL Server Requirements</a></li>
+		<li><a href="#Third_Party_App_Reqs">Third-Party Application Prerequisites</a></li>
+	</ul>
+
+<h2><a name="Hardware_Requirements"></a>Hardware Guidelines</h2>
+
+	<p>The following table provides guidelines for hardware configurations suitable for Wonderware System Platform 2014 R2 SP1 software based on the size of the installation. These guidelines are subject to the limitations of your Windows operating system.</p> 
+	<ul>
+		<li>The Intel Itanium 2 processor is not supported. 
+		<li>We recommend 1280 x 1024 as the minimum display resolution for engineering tools such as the Integrated Development Environment (IDE).</li>
+	</ul>
+	
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" width="700">
+	<tr>
+		<td width="325" class="rowhead">&nbsp;</td>
+        <!-- <td width="37" class="colhead" >CPU <br>(GHz)</td>  -->
+        <td width="65" class="colhead">CPU Cores <br>(Minimum)<sup>1</sup></td>
+        <td width="38"class="colhead">RAM<sup>1</sup> (GB)</td>
+        <td width="77" class="colhead">Storage (GB)<sup>2</sup></td>
+<!--    <td width="80" class="colhead">Monitor <br>
+        Resolution</td>-->
+        <td width="82" class="colhead">Network <br>
+        (MBPS)</td>
+	</tr>
+
+	<tr>
+        <td class="rowhead"><strong>Small Installation</strong> <blockquote>(1 - 25K I/O per Node)</blockquote></td>
+        <!-- <td class="cell">1.8</td>  -->
+        <td class="cell">&ge;2</td>
+        <td class="cell">&ge;4</td>
+        <td class="cell">&ge;30</td>
+<!--    <td class="cell">&ge;1280x1024</td> -->
+        <td class="cell">&ge;100</td>
+	</tr>
+	  
+	<tr>
+        <td class="rowhead"><strong>Medium Installation </strong><blockquote>(25k - 50k I/O per Node)</blockquote></td>
+        <!-- <td class="cell">2.8</td> -->
+        <td class="cell">&ge;4</td>
+        <td class="cell">&ge;8</td>
+        <td class="cell">&ge;500</td>
+<!--    <td class="cell">&ge;1280x1024</td> -->
+        <td class="cell">&ge;1000</td>
+	</tr>
+	
+	<tr>
+        <td class="rowhead"><strong>Large Installation</strong> <blockquote>(More than 50k I/O per Node)</blockquote></td>
+        <!--<td class="cell">2.8</td> -->
+        <td class="cell">&ge;8</td>
+        <td class="cell">&ge;16</td>
+        <td class="cell">&ge;1000</td>
+<!--    <td class="cell">&ge;1280x1024</td> -->
+        <td class="cell">&ge;1000</td>
+	</tr>
+	<tr>
+		<td colspan="6" style="font-size:.8em"><strong>Notes:</strong><br><sup>1</sup> In redundant environments, increase CPU and RAM to maintain a maximum of 40% typical resource utilization.<br>
+		<sup>2</sup> Minimum amount of storage needed to provide sufficient capacity for 1 week @ max frequency.</td>
+	</tr>
+	
+</table>
+	
+<p></p>
+<h3>Hardware Requirements Notes:</h3>
+    <p>Windows operating systems and SQL Server versions may impose hardware requirements that exceed the minimum requirements for Wonderware Application Server 2014 R2 SP1. Refer to the following Microsoft Web sites for Windows and SQL Server hardware requirements:</p>
+	<ul>
+		<li><a href="http://technet.microsoft.com/en-us/library/dn303418.aspx" target="blank">System Requirements and Installation Information for Windows Server 2012 R2</a></li>
+	    <li><a href="https://technet.microsoft.com/library/dd349801"
+		 target="blank">Windows Server 2008 R2 Installation Information</a></li>
+	    <li><a href="https://www.microsoft.com/en-us/windows/windows-10-specifications" target="blank">Windows 10 System Requirements</a></li>
+	    <li><a href="http://windows.microsoft.com/en-us/windows-8/system-requirements" target="_blank">Windows 8 and 8.1 System Requirements</a></li>
+	    <li><a href="http://windows.microsoft.com/en-us/windows7/products/system-requirements" target="_blank">Windows 7 System Requirements</a></li>
+	    <li><a href="http://msdn.microsoft.com/en-us/library/ms143506.aspx#EE32" target="_blank">Hardware and Software Requirements for Installing SQL Server 2014</a></li>
+	    <li><a href="http://msdn.microsoft.com/en-us/library/ms143506%28v=sql.110%29.aspx" target="_blank">Hardware and Software Requirements for Installing SQL Server 2012</a></li>
+	    <li><a href="http://msdn.microsoft.com/en-us/library/ms143506%28v=sql.105%29.aspx" target="_blank">Hardware and Software Requirements for Installing SQL Server 2008 R2</a></li>
+	    <li><a href="http://msdn.microsoft.com/en-us/library/ms143506%28v=sql.100%29.aspx" target="_blank">Hardware and Software Requirements for Installing SQL Server 2008</a></li>
+	</ul>
+
+<h4>Wonderware Historian Hardware Guidelines</h4>
+
+	<ul>
+		<li>Wonderware Historian is not supported on cluster hardware.</li>
+		<li>Do not use the Wonderware Historian computer as a domain controller.</li>
+		<li>If you are running the Wonderware Historian on a virtual server, the Historian must have adequate CPU, network, memory, and disk I/O resources at all times. Overloading the virtual server leads to unpredictable behavior.</li>
+    </ul>
+	
+	<p>For system sizing examples, see the <i>Wonderware System Platform Installation Guide</i>.</p>
+	
+<h4>Wonderware Historian Client Hardware Guidelines</h4>
+    
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" width="600">
+<tbody>
+	<tr>
+		<td class="rowhead" width="260px" >&nbsp;</td>
+        <td class="colhead" width="100px">Required Minimum</td>
+        <td class="colhead" width="240px">Recommended </td>
+	</tr>
+    <tr>
+		<td class="rowhead" >Processor</td>
+        <td class="cell">1.2 GHz <br>Pentium III </td>
+        <td class="cell">Single CPU - 2 GHz or faster</td>
+    </tr>
+    <tr>
+		<td class="rowhead" >Memory, RAM </td>
+        <td class="cell">512 MB </td>
+        <td class="cell">1 GB or more</td>
+	</tr>
+    <tr>
+		<td class="rowhead" >Free hard drive space </td>
+        <td class="cell">55 MB</td>
+        <td class="cell">55 MB or more</td>
+	</tr>
+</tbody>
+</table>
+
+<h4>Wonderware Information Server Hardware Requirements</h4>
+
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" width="600">
+<tbody>
+	<tr>
+		<td class="rowhead" width="260px" >&nbsp;</td>
+        <td class="colhead" width="100px">Required Minimum</td>
+        <td class="colhead" width="240px">Recommended </td>
+	</tr>
+	<tr>
+		<td class="rowhead" >CPU</td>
+        <td class="cell">2.5 GHz Pentium 4</td>
+        <td class="cell" style="text-align: left">3.0 GHz Pentium 4</td>
+	</tr>
+    <tr>
+		<td class="rowhead" >Memory</td>
+        <td class="cell" >2 GB RAM</td>
+        <td class="cell" style="text-align: left">Greater than 2 GB RAM</td>
+	</tr>
+	<tr>
+		<td class="rowhead" >Free hard drive space</td>
+        <td class="cell">10 GB of free disk space</td>
+        <td class="cell" style="text-align: left">20 GB or more of free disk space, depending on the number of InTouch HMI windows, ArchestrA Symbols, ActiveFactory Reports and ArchestrA Reports published to the site.</td>
+	</tr>
+    <tr>
+		<td class="rowhead" >File system</td>
+        <td class="cell" >NTFS</td>
+        <td class="cell" style="text-align: left">NTFS</td>
+	</tr>
+</tbody>
+</table>
+    
+<h4>Alternative Authentication Using Smart Cards</h4>
+    <ul>
+		<li><font color="#000000">Smart Card: Raak Technologies C2-40 Mini Driver Smart Card </font></li>
+		<li><font color="#000000">Smart Card Reader: OK 3021 USB Smart Card Readers </font></li>
+    </ul>
+	
+<h2><a name="OS_Reqs"></a>Operating System, Firewall, .NET Framework, and Virtualization Requirements</h2>
+
+	<ul>
+		<li><a href="#OS_Reqs_Summary">Summary of Requirements</a></li>
+		<li><a href="#Firewall">Firewall Notes</a></li>
+		<li><a href="#OS_Notes_Common">Notes Common to All Components</a></li>
+		<li><a href="#OS_Notes_InTouch">Wonderware InTouch HMI</a></li>
+		<li><a href="#OS_Notes_App_Server">Wonderware Application Server</a></li>
+		<li><a href="#OS_Notes_Historian_Server">Wonderware Historian Server</a></li>
+		<li><a href="#OS_Notes_Historian_Client">Wonderware Historian Client</a></li>
+		<li><a href="#OS_Notes_Info_Server">Wonderware Information Server</a></li>
+		<li><a href="#Microsoft.NET_Reqs">.NET Framework</a></li>
+		<li><a href="#Virtualization_Reqs">Virtualization</a></li>
+	</ul>
+
+<h3><a name="OS_Reqs_Summary"></a>Summary of Requirements for Wonderware System Platform 2014 R2 SP1</h3>
+    <p>The following table lists the operating system, .NET Framework, and virtualization requirements for Wonderware System Platform 2014 R2 SP1.</p>
+    <p class="note"><strong>Note:</strong> Only the software versions shown in the following tables are supported for Wonderware System Platform 2014 R2 SP1 components.</p>
+	
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" width="98%">
+	<tr>
+        <td class="rowheadSmall" rowspan="2" width="250">&nbsp;</td>
+        
+		<td class="colheadSmall" colspan="6">Windows Client OS<sup>1</sup> (32/64-bit)</td>
+		
+        <td class="colheadSmall" colspan="6">Windows Server OS (64-bit)</td>
+        <td width="65" class="colheadSmall" colspan="4" rowspan="2">.NET Framework</td>
+		<td class="colheadSmall" colspan="3" rowspan="2">MS Browser</td>
+		<td class="colheadSmall" colspan="3">Virtualization Host</td>
+    </tr>
+	
+	<tr>
+        <td class="colheadSmall" colspan="2">Embedded<sup>2</sup></td>
+		<td class="colheadSmall" colspan="4">Professional, Enterprise<br>Ultimate<sup>3</sup></td>
+        <td class="colheadSmall" colspan="3">Embedded<sup>4</sup></td>
+		<td class="colheadSmall" colspan="3">Standard, Enterprise<sup>5</sup>, <br>Data Center<sup>6</sup></td>
+        <td class="colheadSmall">Windows<br>Server</td>
+		<td class="colheadSmall" colspan="2">VMWare</td>
+    </tr>
+    <tr>
+        <td width="79" class="colheadSmall"></td>
+		<td width="79" class="colheadSmall">Win<br>7 SP1</td>
+		<td width="79" class="colheadSmall">Win<br>8</td>
+		<td width="79" class="colheadSmall">Win<br>7 SP1</td>
+		<td width="79" class="colheadSmall">Win<br>8</td>
+		<td width="79" class="colheadSmall">Win<br>8.1</td>
+		<td width="79" class="colheadSmall">Win<br>10</td>
+		<td width="75" class="colheadSmall">2008 R2 SP1</td>
+		<td width="75" class="colheadSmall">2012</td>
+		<td width="75" class="colheadSmall">2012 R2</td>
+        <td width="75" class="colheadSmall">2008 R2 SP1</td>
+		<td width="85" class="colheadSmall">2012</td>
+		<td width="85" class="colheadSmall">2012 R2</td>		
+		<td class="colheadSmall">3.5 SP1</td>
+		<td class="colheadSmall">4.5.1<sup>7</sup></td>
+		<td class="colheadSmall">4.5.2<sup>7</sup></td>
+		<td class="colheadSmall" width="50px">4.6<sup>7</sup></td>
+		<td class="colheadSmall" width="50px">IE 10<sup>8</sup></td>
+		<td class="colheadSmall" width="50px">IE 11<sup>8</sup></td>
+		<td class="colheadSmall" width="50px">Edge</td>
+        <td width="67" class="colheadSmall">Hyper-V<sup>9</sup></td>
+        <td width="86" class="colheadSmall">vSphere 5.x-6.0<sup>10</sup></td>
+        <td width="69" class="colheadSmall">Workstation<sup>11</sup></td>
+	</tr>
+	  
+
+    <tr>
+        <td class="rowheadSmall">Wonderware Application Server 2014 R2 SP1</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedcompatible">C</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+	</tr>
+
+    <tr>
+        <td class="rowheadSmall">Wonderware InTouch 2014 R2 SP1</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedcompatible">C</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+    </tr>
+
+    <tr>
+        <td class="rowheadSmall">Wonderware Historian 2014 R2 SP1</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedcompatible">C</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+    </tr>
+    <tr>
+        <td class="rowheadSmall">Wonderware Historian Client 2014 R2 SP1</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedcompatible">C</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+	</tr>
+    <tr>
+        <td class="rowheadSmall">Wonderware Information Server 2014 R2 Portal</td>
+	    <td class="supportednotSmall">N</td>
+		<td class="supportednotSmall">N</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportednotSmall">N</td>
+		<td class="supportednotSmall">N</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedcompatible">C</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportednotSmall">N</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+    </tr>
+
+    <tr>
+        <td class="rowheadSmall">Wonderware Information Server 2014 R2 Client</td>
+	    <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedcompatible">C</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportednotSmall">N</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+    </tr>	
+	  
+	<tr>
+        <td class="rowheadSmall">FS Gateway 3.0 SP2</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+	    <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="graySmall">&nbsp;</td>
+        <td class="graySmall">&nbsp;</td>
+	    <td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+  	</tr>
+   
+	<tr>
+        <td class="rowheadSmall">System Size</td>
+		<td class="rowheadSmall" colspan="12" style="padding-left:0.25in">This section applies to GR Node only; remote nodes can use any supported OS</td>
+		<td class="rowheadSmall" colspan="20"></td>
+    </tr>
+	
+    <tr>
+        <td class="rowheadSmall" style="padding-left:0.15in">Small Installation (1-25,000 I/O per node)</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedcompatible">C</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+    </tr>
+	  
+    <tr>
+        <td class="rowheadSmall" style="padding-left:0.15in">Medium Installation (25k-50k I/O per node)</td>
+        <td class="supportednotSmall">N</td>
+		<td class="supportednotSmall">N</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportednotSmall">N</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedcompatible">C</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+    </tr>
+	
+    <tr>
+        <td class="rowheadSmall" style="padding-left:0.15in">Large Installation (50k-400k I/O per node)</td>
+        <td class="supportednotSmall">N</td>
+		<td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+		<td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+		<td class="supportednotSmall">N</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedcompatible">C</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+		<td class="graySmall">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+    </tr>
+
+	<tr>
+		<td class="rowheadSmall">Notes</td>
+		<td style="font-size:.8em" colspan="22"class="tab">&nbsp;&nbsp;<sup>1</sup> Up to five remote nodes are supported by a GR running on a Client OS.<br>
+		&nbsp;&nbsp;<sup>2</sup> Windows 7.1 SP 1 Embedded must use Application Compatibility Template. Windows 8 Embedded must use full image with all modules.<br>
+		&nbsp;&nbsp;<sup>3</sup> Ultimate applies to Windows 7 SP1 only. Ultimate versions not available for newer versions of Windows.<br>
+		&nbsp;&nbsp;<sup>4</sup> All Embedded Windows Server versions must use full image with all modules.<br>
+		&nbsp;&nbsp;<sup>5</sup> Enterprise applies to Windows Server 2008 R2 only.<br> 
+		&nbsp;&nbsp;<sup>6</sup> Data Center applies to Windows Server 2012 and 2012 R2 only.<br>
+		&nbsp;&nbsp;<sup>7</sup> Custom Client Controls that leverage functionality not contained in .Net Framework 4 are not supported.<br>
+		&nbsp;&nbsp;<sup>8</sup> Enable Compatibility View mode when accessing Wonderware Information Server with Internet Explorer.<br>
+		&nbsp;&nbsp;<sup>9</sup> Support for Hyper-V is based on operating system version.<br>
+		&nbsp;&nbsp;<sup>10</sup> Support for VMWare vSphere includes High Availability/Disaster Recovery. <br>
+		&nbsp;&nbsp;<sup>11</sup> Supported versions of VMWare Workstation include 7.x through 11.x.</td>
+	</tr>
+
+	</table>
+
+	<p>&nbsp;</p>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" width="260">
+<tbody>
+	<tr>
+        <td style="font-weight: normal; font-size: 0.7em;">Supported</td>
+        <td class="supportedSmall" style="font-weight: normal; font-size: 0.7em; text-align: center;">Y</td>
+    </tr>
+    
+	<tr>
+        <td style="font-weight: normal; font-size: 0.7em;">Not Supported</td>
+        <td class="supportednotSmall" style="font-weight: normal; font-size: 0.7em; text-align: center">N</td>
+    </tr>
+
+	<tr>
+        <td style="font-weight: normal; font-size: 0.7em;">Coexist</td>
+        <td class="supportedcompatible" style="font-weight: normal; font-size: 0.7em; text-align: center">C</td>
+    </tr>
+
+	<tr>
+        <td style="font-weight: normal; font-size: 0.7em;">Not Applicable</td>
+        <td bgcolor="#adafaf" class="gray" style="font-weight: normal; font-size: 0.7em; text-align: center; color: rgb(216, 28, 63);"></td>
+    </tr>
+</tbody>
+</table>
+
+<h3><a name="Software_Notes_Common"></a>Software Requirement Notes:</h3>
+
+<h4>Windows Operating System Notes</h4>
+	<ul>
+		<li>Newer operating system Service Packs (SPs) than those listed do not block the installation of Schneider Electric Software products. A warning message may appear during the installation process.</li>  
+		<li>The Galaxy Repository (GR Node) can run on a client Windows operating system in a configuration with up to five remote nodes. For an environment with more than five remote nodes, or with more than one GR node, the Galaxy Repository must be installed on a computer running a Windows Server operating system.</li>
+		<li>Development and application nodes are considered to be clients of the server GR node.</li>
+		<li>When the operating system is upgraded on a computer, existing Wonderware System Platform products must be uninstalled prior to the upgrade and then reinstalled after the upgrade. There are three exceptions. Wonderware System Platform products do not need to be uninstalled when upgrading from:
+		<ul>
+		<li>Windows 8 to 8.1</li>
+		<li>Windows 8.1 to 10</li>
+		<li>Windows 2012 to Windows 2012 R2</li>
+		</ul>
+	</ul>
+	
+<h4>.Net Notes</h4>
+	<ul>
+		<li>Versions of .NET (other than 4.x versions) can coexist, but all .NET code, including QuickScript.net scripts, run under .NET 4.5.1 or higher. For more information about .NET Framework requirements and compatibility, see <a href="#Microsoft.NET_Reqs">.NET Framework Requirements and Compatibility </a>.</li>
+		<li>.NET 3.5 is installed only because the supported SQL Server versions require it. No other dependencies must exist.</li>
+	</ul>
+	
+<h4>SQL Server Notes</h4>
+	<ul>
+		<li>When installing SQL Server, use the program version (32 or 64-bit) that matches the operating system.</li>
+		<li>Upgrading SQL Server with Wonderware products installed is supported.</li>
+	</ul>
+
+<h3><a name="Firewall"></a>Firewall Notes</h3>
+	<p>In order to establish communication with other components and services on the network, Wonderware System Platform and ArchestrA Service Bus (ASB) Services require certain network ports to be opened in the Windows Firewall. Typically, this is automatically done during the Wonderware System Platform installation. However, if the Windows Firewall is enabled at time of installation or if an alternative firewall is in use during installation, you will need to manually open the appropriate network ports in the firewall. For more information about port configuration, see "Configuring ArchestrA Service TCP Ports" in the <i>Wonderware Application Server User's Guide</i>.</p>
+
+<h3><a name="OS_Notes_Common"></a>Operating System Notes: Common for Wonderware Products</h3>
+  
+<h4>ActiveX Controls Behavior on Windows 7, Windows 2008 R2, and Later Operating Systems</h4>
+	<p>Due to the Data Execution Prevention (DEP) feature of Windows 7, Windows 2008 R2, and later operating systems, any ActiveX control built with ATL version 7.1 or earlier will fail to host or will have unpredictable behaviors in InTouch 11.1 SP1 either in WindowMaker or WindowViewer running on Windows 7, Windows 2008 R2, and later operating systems.</p>
+	
+	<p>The ActiveX controls and error message, along with solutions to resolve the behavior, are described in detail in TechNote 522, "Some ActiveX Controls NOT Supported in InTouch 2012 R2 (Version 10.6)". You can download this TechNote from the <a href="http://softwaresupport.invensys.com/"> Schneider Electic Software Global Customer Support (GCS)</a> website.</p>
+
+<h4>Configuring Remote Alarm Retrieval Queries When Running Windows 7, Windows Server 2008 R2, and Later Operating Systems</h4>
+	<p>The process to configure remote alarm retrieval queries has changed for interactive applications such as InTouch HMI when running on Windows 7, Windows Server 2008 R2, and later operating systems. </p>
+    <p>When InTouch  WindowViewer is started and generates alarms from an interactive Windows 7, Windows Server 2008 R2, or later desktop session, an <strong>AlarmViewer</strong> control (running within InTouch HMI) on a remote node must be specially configured to query the alarms. The source alarms will not appear unless the <strong>AlarmViewer</strong> control's alarm query is configured.</p>
+    <p>This type of query only works for InTouch HMI as an alarm provider running in a Terminal Services session, not for InTouch HMI running in a console session.</p>
+    <p><b>To configure the AlarmViewer's alarm query</b></p>
+	
+    <ol>
+		<li>After starting InTouch WindowViewer (alarm provider) on the Windows 7, Windows Server 2008 R2, or later node, open the <b>SMC Logger </b>and look for the most recent string
+        generated by <b>AlarmMgr</b>. For example: "Registering AlarmMgr with SLSSVC as AlarmMgr 253.127.148.120". The indicated IP address will be unique to your alarm-providing node. Note the IP address for use in Step 2.</li>
+		<li>In the <b>Alarm Query </b>tab of the <b>AlarmViewer </b>control on the remote computer, configure the alarm query as follows, substituting your nodename of the alarm providing InTouch HMI for "nodename" below and substituting your IP address noted in the previous step: </li>
+    </ol>
+		<blockquote>
+		<blockquote><code>\\<em>nodename</em>:<em>ip_address</em>\intouch!$system</code></blockquote>
+		</blockquote>
+
+		<blockquote>
+		<blockquote><p>where <em>nodename</em> is the name of the node that is providing the InTouch alarm and <em>ip_address</em> is the IP address that you determined in step 1. </p>
+		</blockquote>
+		</blockquote>
+    <ol>
+		<li value="3">Test to validate that the alarms generated from the alarm-providing node are shown accurately in the <b>AlarmViewer </b>control.</li>
+    </ol>
+	
+<h4><a name="Alarm_DB_Logger">Using Alarm Manager on a Single Node Running Both Wonderware InTouch HMI and Application Server Alarm Providers on Windows Vista and Later Operating Systems</a></h4>
+  
+	<p>Starting with Microsoft Windows Vista, the operating system imposes "Session 0 Isolation" as a security enhancement. All Windows services and associated programs are required to run in Session 0, and no GUI applications are allowed to run in Session 0. </p>
+	<p>Prior to Windows Vista, Wonderware Application Server and InTouch WindowViewer ran in the same Windows session. Session 0 Isolation requires that Application Server and WindowViewer run in separate Windows sessions. Alarms that are reported by the Galaxy are handled by the Session 0 instance of Alarm Manager (AlarmMgr), which is now different from the Console Session instance of AlarmMgr that handles InTouch alarms. A simple alarm query in an InTouch alarm display such as </p>
+    <blockquote>
+	<code>\InTouch!$System \Galaxy!Area_001</code>
+	</blockquote>
+	
+	<p>is now serviced by two separate instances of AlarmMgr &#8212; one running in the Console Session for InTouch, another running in Session 0 for the Galaxy.</p>
+	<p>This behavior, and related behaviors and error messages resulting from the Windows operating system Session 0 changes, along with procedures to configure the Distributed Alarm System to support alarms from both InTouch and Application Server on the same computer node running with Windows Vista and later operating systems, are described in detail in TechNote 988, "AlarmMgr Support for InTouch and AppServer on Windows Vista and Later". You can download this TechNote from the <a href="http://softwaresupport.invensys.com"> Schneider Electic Software Global Customer Support (GCS)</a> website.</p>
+
+<h4><a name="TerminalServices"></a>Terminal Services Behavior in Windows Server 2008 R2 and Later Operating Systems</h4>
+
+	<p> Windows Server 2008 R2 and later operating systems no longer support the /console switch as a means of starting the remote desktop (RDP) client, also known as Session 0 or Terminal Server Console session. In Windows Server 2008 R2 and later operating systems, Session 0 is no longer an interactive session, and is reserved only for Windows services. Windows Server 2008 R2 and later operating systems treat all remote connections as remote RDP sessions regardless of /console, /admin, or any other switches used to make the connection. </p>
+    <p>This impacts InTouch HMI functionality such as Alarm Manager that depends on the Terminal Server Console session. The impact to Wonderware Application Server is minimal as most Wonderware Application Server processes run as services. One impact to Wonderware Application Server is to carry forward the restriction introduced with the Windows Vista operating system which permits only one alarm provider. While both Wonderware Application Server and InTouch HMI can be configured as alarm providers, only one alarm provider can be configured at any one time.</p>
+	<p>Refer to the Wonderware InTouch HMI 2014 R2 SP1 Readme for further information about InTouch HMI applications running in the Terminal Server Console.</p>
+	<p>If you are running WindowViewer within a Terminal Server session and want to access alarms from WindowViewer in a client session, you must use the syntax <b>\\terminalservernode:&lt;IP address&gt;\InTouch!$System</b> to access the alarms, with a colon (:) after the node name. The IP address is that of the client computer connected to the session. </p>
+
+<h3><a name="OS_Notes_InTouch"></a>Operating System Notes: Wonderware InTouch HMI 2014 R2 SP1</h3>
+<!--
+<p>The following notes are specific to the InTouch HMI 2014 R2 SP1 operating system support and requirements.</p>  
+	<ul>
+		<li>The recommended operating system for a Galaxy Repository is Windows Server 2012 R2.</li>
+		<li>Microsoft Windows 8.1 (32-bit or 64-bit) is the recommended operating  system to run InTouch HMI client components.</li>
+		<li>Microsoft Windows Server 2012 R2 is the recommended operating system to run InTouch HMI&nbsp;server components.</li>
+		<li>The recommended operating system for InTouch HMI development is Windows Server 2012 R2 or Windows 8.1. </li>
+		<li>The recommended operating system for run-time nodes is Windows 8.1.</li>
+	</ul>
+-->	
+<h4><a name="Using WW IT Windows 7 and Win 2008 R2"></a>Wonderware InTouch HMI 2014 R2 SP1 with Windows 7, Windows Server 2008 R2, and Later Operating Systems</h4>
+
+	<ul>
+		<li>Windows 7 and later operating systems do not support a dedicated single-node server configuration that runs one or more databases for an InTouch HMI system.</li>
+		<li>As of Wonderware System Platform 2014, a computer running Windows 7 or later operating systems can be configured as both an InTouch and an Application Server alarm provider. For more information, see <a href="#Alarm_DB_Logger">Using Alarm Manager on a Single Node Running Both Wonderware InTouch HMI and Application Server Alarm Providers on Windows Vista and Later Operating Systems</a>.</li>
+		<li> Wonderware InTouch HMI 2014 R2 SP1 does not support the following legacy script functions on 64-bit systems: WWPoke(), WWExecute(), WWRequest(), ActivateApp() and SendKeys(). </li>
+		<li>If Recipe Manager is started using the path <b>Start</b>\<b>Program</b>\<b>Wonderware</b>\<b>InTouch\Recipe</b>, then select <strong>Run as Administrator</strong>.</li>
+		<li>The InTouch Extensibility Toolkit might need to be started by right-clicking and selecting <strong>Run As Administrator</strong> to function properly.</li>
+		<li>The onscreen keyboard options have changed for the Windows 7, Windows Server 2008 R2, and later operating systems.</li>
+		<li>Hovering to select from the Windows keyboard does not work in the Windows 7, Windows Server 2008 R2, and later operating systems. </li>
+	</ul>
+	
+<h4><a name="InTouch_DDE_Support"></a>Wonderware InTouch HMI 2014 R2 SP1 View Applications and DDE Support</h4>
+
+	<p>NetDDE is not supported for InTouchView applications. </p>
+    <p>By design, an InTouchView application does not serve data to any other source, including InTouch HMI itself. When WindowViewer starts, it verifies if the application is an InTouchView application. When WindowViewer detects an InTouchView application, it does not register to become a DDE server. ArchestrA Symbols make use of the client layer when accessing InTouch tags, and appear as a third-party client trying to access WindowViewer as a data server. As a result, ArchestrA Symbols cannot communicate with InTouch tags when used with an InTouchView license. </p>
+    <p>In ArchestrA Symbols, <b>InTouch:&#8249;tagname&#8250;</b> is still a valid methodof referring to an InTouch tag on a local node.  </p>
+	  
+<h4><a name="Support_User_Account_Control"></a>Wonderware InTouch HMI 2014 R2 SP1 Support for Windows User Account Control</h4>
+    <p>Wonderware System Platform 2014 R2 SP1 with InTouch HMI 2014 R2 (v11.1) SP1  supports User Account Control-enabled operations on run-time nodes. <!--You must disable User Account Control (UAC) before installing Wonderware System Platform 2014 and before performing Configurator operations. UAC also must be disabled on IDE and GR nodes.--></p>
+
+<h3><a name="OS_Notes_App_Server"></a>Operating System Notes: Wonderware Application Server</h3>
+
+	<ul>
+		<!-- <li>Windows Server 2012 R2 is the recommended operating system for the Galaxy Repository node.</li>
+		<li>Windows 8.1 is the recommended operating system for Wonderware Application Server development (IDE) or run-time nodes (Bootstrap). </li> -->
+		<li>The Bootstrap, IDE, and Galaxy Repository are supported by the following language versions of Microsoft operating systems: English, Japanese, Simplified Chinese, German, and French. The Galaxy Repository is also supported by the English, Japanese, Simplified Chinese, German, and French versions of Microsoft SQL Server 2008 SP3, SQL Server 2008 R2 SP2, and SQL Server 2012 SP1. </li>
+		<li>Upon installation, the selected language and regional settings must match those of the intended operating locale and must use the collation of SQL Server that matches the operating system locale.</li>
+	</ul>
+	
+<h4>Wonderware Application Server and DDE Support  </h4>
+
+	<p>In Windows 7, Windows Server 2008 R2, and later operating systems, DDE is supported only on a local node. Windows 7, Windows Server 2008 R2, and later operating systems do not support NetDDE. ArchestrA Symbols use the client layer when accessing InTouch tags and appear as a third-party client trying to access WindowViewer as a data server. Therefore the use of NetDDE for communication is not supported and not recommended. </p>
+    <p>In ArchestrA Symbols, <b>InTouch:&lt;<i>tagname</i>&gt;</b> is still a valid method of referring to an InTouch tag on a local node.</p>
+	
+<h4><a name="Using Wonderware Application Server with Windows 7 and Windows Server 2008 R2"></a>Using Wonderware Application Server with Windows 7, Windows Server 2008 R2, and Later Operating Systems</h4>
+
+    <p>This section describes specific behaviors and restrictions when using the Windows 7 and Windows Server 2008 R2 operating systems with Wonderware Application Server.</p>
+
+	<ul style="LIST-STYLE-TYPE: disc">
+		<li>The DDESuiteLink Client connection to the local Operations Integration (OI) Server (DAServer) using Local DDE is supported ONLY when the OI Server is configured as "Not a Service" and activated from its executable file or launched from InTouch. On Windows 7, Windows 2008 R2, and later operating systems, Local DDE is NOT supported when the OI Server is activated in the System Management Console (SMC). </li>
+		<li>For toolkits such as the ArchestrA Object Toolkit, GRAccess Toolkit, and MXAccess Toolkit to function properly on Windows 7 and later operating systems, you may need to start the toolkit by right-clicking on the file and then clicking <b>Run As Administrator</b>. </li>
+	</ul>
+	
+<h4>Wonderware Application Server and User Account Control Level</h4>
+    <p>Wonderware Application Server 2014 R2 SP1 supports User Account Control-enabled operations. Starting the IDE still requires elevated privileges.</p>
+	
+<h3><a name="OS_Notes_Historian_Server" id="OS_Notes_Historian_Server"></a>Operating System Notes: Wonderware Historian Server</h3>
+
+	<p>Scenarios involving remote node communication fail if the Historian node is using the Windows 7, Windows 8, Windows Server 2008 R2, or Windows Server 2012 operating system.</p>
+	<p>For example:</p>
+	<ol>
+		<li>When you log in as a local administrator on a computer and try to add a remote Wonderware Historian node (a second node with the Wonderware Historian installed) using the network account from the Management Console, the status of the remote Historian node is not reflected correctly. </li>
+		<li>Test the connection from a Historian node using the operating system to a remote tier-2 historian. The following error message is shown: "Test Connection to replication server () failed: cannot connect to Tier-1 replication service (error 0x80004005: Unspecified error)" </li>
+		<li>Replication to the remote tier-2 historian fails. </li>
+		<li>Although a remote IDAS service starts successfully, errors and warnings stating "Failed to get IDAS configuration version..." and "Unable to start data acquisition" are logged. This problem occurs if the ArchestrA user account is a local user. If the ArchestrA user account is a domain user, then this problem does not occur. </li>
+	</ol>
+	<p>Workaround:</p>
+	<ol>
+		<li>Open a command prompt and run the following command:
+		<blockquote><code>cmd /c reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f</code></blockquote>
+		This sets LocalAccountTokenFilterPolicy registry entry value to 1. In doing so, an elevated token for the user is generated.</li>
+		<li>Restart the system.</li>
+	</ol>
+
+<h3><a name="OS_Notes_Historian_Client" id="OS_Notes_Historian_Client"></a>Operating System Notes: Wonderware Historian Client</h3>
+
+    <p>When the Wonderware Historian Client application is running on Microsoft Windows 7, Windows Server 2008 R2, and later operating systems, User Account Control can be enabled and running as non-administrator. </p>
+
+<h3><a name="OS_Notes_Info_Server"></a>Operating System Notes: Wonderware Information Server</h3>
+
+    <p>When the Wonderware Information Server is running on Microsoft Windows 7, Windows Server 2008 R2, and later operating systems, User Account Control can be enabled and running as non-administrator. </p>
+	
+<h3><a name="Microsoft.NET_Reqs" id="Microsoft.NET_Reqs"></a>.NET Framework Requirements and Compatibility  </h3>
+	<p></p>
+	<p><b>IMPORTANT:</b> Wonderware System Platform 2014 R2 SP1 installs .NET 4.5.2 if the currently installed version of .NET is 4.5 or lower. If .NET 4.5.1 or later is installed, no change is made to the .NET Framework. Prior to upgrading your existing applications to Wonderware System Platform 2014 R2 SP1, we strongly recommended that you:
+	<ul>
+		<li>Back up  your applications</li>
+		<li>Familiarize yourself with the changes introduced by Microsoft in the .NET Framework</li>
+		<li>Review your .NET scripts and .NET controls for any required changes</li>
+	</ul>
+	<p>After upgrading to Wonderware System Platform 2014 R2 SP1, you should perform application testing on application scripts and on script libraries used by the application to ensure they continue to function properly under .NET 4.5.2. We also recommend you test the upgrade in a staging system prior to upgrading your production system.
+ 
+	<p>Wonderware System Platform 2014 R2 SP1 leverages Microsoft .NET Framework 4. The Wonderware System Platform installation program will install .NET 4.5.2 if your system uses version 4.5 or lower. No change is made if your system uses .NET 4.5.1 or higher. Multiple versions of the .NET Framework can coexist. On nodes where SQL Server is installed, .NET 3.5 is also installed by Wonderware System Platform to support SQL Server. In this scenario, other applications you have on the same machine with dependencies on .NET 3.5 will access .NET 3.5. Wonderware System Platform 2014 R2 SP1 will use .NET 4.5.1, 4.5.2, or later.
+ 
+	<p>All user-supplied .NET code that runs in the context of InTouch HMI and Application Server requires .NET Framework 4.5.1 or higher. Although .NET Framework 4.5.1 (and later) is highly compatible with applications that are built with earlier .NET Framework versions, you may have to update your scripts, if your .NET scripts were created prior to Wonderware System Platform 2014.  These changes may also affect .NET controls developed with .NET 3.5.
+
+	<p>In ArchestrA scripting, some .Net codes could fail if not using proper text encoding, and could cause a script to exit without completion. The UTF8Encoder is the default BinaryStream decoder in .Net 4.5. To enable an ArchestrA script to decode ASCII XML data, for example, insert the following snippet: </p>
+	
+	<blockquote>
+            <p><code>BinaryReader streamReader = new BinaryReader(ms, new ASCIIEncoding());</code></p>
+	</blockquote>
+	<p>To learn more about changes introduced in different versions of the .NET Framework, refer to the following Microsoft resources:</p>
+
+	<blockquote>
+<table style="text-align: left;" border="0" cellpadding="5" cellspacing="1">
+<tbody>
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" width="450" rowspan="1">What's New in the .NET Framework:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1"><a href="http://msdn.microsoft.com/en-us/library/ms171868%28v=vs.110%29.aspx">
+		http://msdn.microsoft.com/en-us/library/ms171868%28v=vs.110%29.aspx</a></td>
+	</tr>
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" width="450" rowspan="1">What's obsolete in the .NET Framework Class Library:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1"><a href="https://msdn.microsoft.com/en-us/library/ee461502%28v=vs.110%29.aspx">https://msdn.microsoft.com/en-us/library/ee461502%28v=vs.110%29.aspx</a></td>
+	</tr>
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" width="450" rowspan="1">Migration Guide to the .NET Framework 4.6 and 4.5:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1"><a href="https://msdn.microsoft.com/en-us/library/ff657133%28v=vs.110%29">https://msdn.microsoft.com/en-us/library/ff657133%28v=vs.110%29</a></td>
+	</tr>
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" width="450" rowspan="1">.NET Framework 4 Migration Issues:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1"><a href="http://msdn.microsoft.com/en-us/library/ee941656%28v=vs.100%29">http://msdn.microsoft.com/en-us/library/ee941656%28v=vs.100%29</a></td>
+	</tr>
+</tbody>
+</table>
+</blockquote>
+
+<h3><a name="Virtualization_Reqs"></a>Virtualization Host Support</h3>
+
+	<p>Wonderware System Platform 2014 R2 SP1 has been tested with and supports the following virtualization environments:</p>
+	<ul>
+		<li>Microsoft Hyper-V: based on the version of Windows</li>
+		<li>VMware 6.0  virtualization with High Availability and Disaster Recovery (HA/DR)</li>
+		<li>VMWare vSphere 6.0</li>
+		<li>VMware 5.0 Update 1 virtualization with High Availability and Disaster Recovery (HA/DR)</li>
+		<li>VMWare vSphere 5.0 Update 1</li>
+	</ul>
+	
+<h2><a name="SQL_Server_Reqs"></a>SQL Server Requirements</h2>
+
+	<p>The following table describes the SQL Server requirements for  all Wonderware System Platform 2014 R2 SP1 components.</p>
+  
+<!--         SQL Server Requirements      -->
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" >
+    <tr>
+		<td class="colhead" width="300"></td>
+		<td colspan="4" class="colhead" align="center">SQL Server Express-SSMSE</td>
+		<td colspan="4" class="colhead">SQL Server Standard, Enterprise</td>
+	</tr>
+	
+	<tr>
+		<td  width="300" align="right" valign="bottom" bgcolor="87D300"><strong>NSP</strong> = No service pack</td>
+		<td width="100" class="colhead" style="font-size:.8em">2008 SP3<br>(32 bit)</td>
+		<td width="100" class="colhead" style="font-size:.8em">2008 R2 NSP, SP1, SP2, SP3</td>
+		<td width="100" class="colhead" style="font-size:.8em">2012 NSP, SP1, SP2</td>
+		<td width="100" class="colhead" style="font-size:.8em">2014 NSP, SP1</td>
+		<td width="100" class="colhead" style="font-size:.8em">2008 SP3<br>(32-bit only)</td>
+		<td width="100" class="colhead" style="font-size:.8em">2008 R2NSP, SP1, SP2, SP3</td>	  
+		<td width="100" class="colhead" style="font-size:.8em">2012<br>NSP, SP1, SP2
+		<td width="100" class="colhead" style="font-size:.8em">2014<br>NSP, SP1</td>
+	</tr>
+
+    <tr>
+        <td class="rowhead" style="padding-left:0.15in">Application Server 2014 R2 SP1</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+	</tr>
+	
+    <tr>
+        <td class="rowhead" style="padding-left:0.15in">InTouch 2014 R2 SP1</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	
+    <tr>
+        <td class="rowhead" style="padding-left:0.15in">Historian 2014 R2 SP1</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+		<td class="supported">Y</td>
+    </tr>
+	
+    <tr>
+        <td class="rowhead" style="padding-left:0.15in">Historian Client 2014 R2 SP1</td>
+        <td class="gray">n/a</td>
+        <td class="gray">n/a</td>
+        <td class="gray">n/a</td>
+		<td class="gray">n/a</td>
+        <td class="gray">n/a</td>
+		<td class="gray">n/a</td>
+		<td class="gray">n/a</td>
+        <td class="gray">n/a</td>
+    </tr>
+	
+<!--   <tr>
+        <td class="rowheadSmall" style="padding-left:0.15in">Information Server Portal 2014 R2</td>
+        <td class="smallsystemSmall">S</td>
+		<td class="smallsystemSmall">S</td>
+		<td class="smallsystemSmall">S</td>
+		<td class="smallsystemSmall">S</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+        <td class="smallsystemSmall">S</td>
+		<td class="smallsystemSmall">S</td>
+		<td class="smallsystemSmall">S</td>
+		<td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+		<td class="supportedSmall">Y</td>
+		<td class="smallsystemSmall">S</td>
+        <td class="supportedSmall">Y</td>
+    </tr>    -->
+
+    <tr>
+        <td class="gray"><b>System Size</b></td>
+		<td class="gray" colspan="8"></td>
+    </tr>
+  
+    <tr>
+        <td class="rowhead" style="font-size:.8em; padding-left:.15in">Small Installation <br>(1-25,000 I/O per node)</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+	</tr>
+
+    <tr>
+        <td class="rowhead" style="font-size:.8em; padding-left:.15in">Medium Installation <br>(25k-50k I/O per node)</td>
+        <td class="supportednot">N</td>
+		<td class="supportednot">N</td>
+        <td class="supportednot">N</td>
+		<td class="supportednot">N</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+        <td class="supported">Y</td>
+	</tr>
+
+    <tr>
+        <td class="rowheadSmall" style="font-size:.8em; padding-left:.15in">Large Installation (50k-400k I/O per node)</td>
+        <td class="supportednot">N</td>
+		<td class="supportednot">N</td>
+        <td class="supportednot">N</td>
+        <td class="supportednot">N</td>
+		<td class="supported">Y</td>
+        <td class="supported">Y</td>
+		<td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	
+	<tr>
+		<td class="rowheadSmall" style="font-size:.8em; padding-left:.15in">Note</td>
+		<td colspan="8" style="padding-left:.15in">
+		Match SQL Server version (32- or 64-bit) to operating system version.</td>
+	</tr>
+	
+ </table>
+	
+
+ <!--      SQL Server Requirements        -->
+	<p>&nbsp;</p>
+	<p>We recommend that you install and configure the supported SQL Server version before you begin the Wonderware System Platform installation program, especially if you expect Wonderware Information Server to coexist, either on initial or subsequent installations, with the InTouch HMI, Application Server, or the Historian Server.</p>
+
+	<p>The Wonderware System Platform installer will install all prerequisites except the SQL Server requirement for installing the Historian Server. If you select the Historian Server for installation, and if the supported version of SQL Server is not already installed, you must exit the installation program, install the supported SQL Server version, then resume the installation. </p>
+
+<h3>Considerations for SQL Server </h3>
+
+	<ul>
+		<li><b>Alarm DB Logger</b> To use the Alarm DB Logger with SQL Server Express, you need to change the default authentication mode from Windows-based to Mixed Mode.</li>
+        <li><b>SQL Server Configuration Rights:</b> <a name="SQLServerBUILTINAdministratorsRole"></a>While installing Wonderware System Platform, if the logged-on user performing the installation is not a SQL Server administrator, the <B>Config SQL</b> dialog box appears and requests SQL Server administrator credentials.</li>
+        <li><b>Maximum Server Memory:</b> After installing SQL Server, use SQL Server Management Studio to confirm that the Maximum Server Memory is configured to approximately 65% of the total available RAM. By default SQL Server does not clamp this setting. The Wonderware System Platform installation process will attempt to adjust it if it has the appropriate rights to configure SQL Server.</li>
+		<li><b>Restoring a CAB:</b> You cannot restore a Galaxy  .cab file backed up in SQL Server 2012 or SQL Server 2008 to a node with an earlier version of SQL Server. For example, you cannot restore a Galaxy .cab file backed up in SQL Server 2012 to a node with SQL Server 2008. Attempting such a restore results in an error message. </li>
+		<li>The MSSQL Server user account is not supported for the SQL Server 2012 Service. Instead, configure SQL Server to run as the local system or Network Service account. Named instances are not supported.</li>
+		
+		<li><b>Migrating SQL Server Versions:</b> You can migrate a SQL Server database to a later version from any of two prior versions. For example, you can migrate to SQL Server 2012 from SQL Server versions 2008 or 2005. You can migrate to SQL Server 2008 from SQL Server versions 2005 or 2000. You cannot migrate directly from SQL Server 2000 to SQL Server 2012. Such a migration requires an intermediate step. For more information and helpful procedures, see the following Microsoft references:
+		<ul>
+			<li><a HREF="http://msdn.microsoft.com/en-us/library/bb677622.aspx" target="blank">Upgrade to SQL Server 2014</a></li>
+			<li><a HREF="http://blogs.technet.com/b/mdegre/archive/2012/06/15/migration-sql-server-2000-to-sql-server-2012.aspx" target="blank">Migrate SQL Server 2000 to SQL Server 2012</a></li>
+			<li><a HREF="http://msdn.microsoft.com/en-us/library/bb677619%28v=sql.105%29.aspx" target="blank">Migrating to SQL Server 2008 R2</a></li>
+			<li><a HREF="http://msdn.microsoft.com/en-us/library/bb677619%28v=sql.100%29.aspx" target="blank">Migrating to SQL Server 2008</a></li>
+			<li><a HREF="http://blogs.msdn.com/b/ai/archive/2012/08/09/migrating-sql-server-2000-user-databases-to-sql-server-2012.aspx" target="blank"> T-SQL scripts to migrate SQL server 2000 user databases to SQL server 2012</a></li>
+			<li><a href="http://msdn.microsoft.com/en-us/library/bb510680.aspx" target="blank">ALTER DATABASE Compatibility Level (Transact-SQL) SQL Server 2012</a></li>
+			<li><a href="http://msdn.microsoft.com/en-us/library/bb510680(v=sql.105).aspx" target="blank">ALTER DATABASE Compatibility Level (Transact-SQL) SQL Server 2008 R2</a> </li>
+		</ul></li>						
+
+		<li><b>SQL Server Rights Requirements:</b> SQL Server 2008 and later versions do not automatically create the BUILTIN\Administrators role delivered in SQL Server 2005. Because of this change to SQL Server, the Wonderware Application Server 2014 R2 SP1 installation process will create the necessary operating system user group (aaAdministrators) as well as the necessary SQL Server role. This automated process will provide the rights required to allow operations within the Galaxy Repository without the need for blanket BUILTIN\Administrator rights. The aaAdministrators group must be present and enabled. If you accidentally delete the aaAdministrators group from the Windows operating system, you can run either of two options to restore it:
+ 		<ul style="LIST-STYLE-TYPE: disc">
+			<li>Run the Change Network Utility from the Windows Start menu.</li>
+			<li>Run the aaConfig SQL Utility from the Windows Start menu.</li>
+		</ul>
+		<p>If you accidentally delete the aaAdministrators group from the SQL Server security logins, you must run the aaConfig SQL Utility to restore it. Refer to the <i>Wonderware Application Server User's Guide</i>, "About ArchestrA User Accounts", for further information and procedures about restoring the aaAdministrators group.</p>
+		</li>
+	</ul>
+		  
+<h3>Considerations for SQL Server Express</h3>
+
+	<ul>
+		<li>SQL Server Express is  supported for use on an InTouch, Application Server, or Historian node, recommended for use only in small or development configurations. SQL Server 2014 Express with Tools SP1  is automatically installed for when you install for InTouch, Application Server, or the Historian, if, at time of installation, no other SQL Server elements are installed on the computer.</li>
+			
+		<li>If you plan to use SQL Server Express with Wonderware Information Server 2014 R2 and Wonderware InTouch HMI 2014 R2 SP1 on the same node, the following limitations apply:
+		<ul>
+			<li>Installing Wonderware Information Server first, using the MS SQL Express default instance name set to "SQLEXPRESS", and then installing Wonderware  InTouch HMI will work without issue. Note that in this scenario, each component uses a dedicated instance of SQL Server 2014 Express with Tools SP1 .</li>
+			<li>Installing  Wonderware InTouch HMI first, which silently installs and configures SQL Server 2014 Express with Tools SP1, and then installing Wonderware Information Server will not allow Wonderware Information Server to work. In this case, during the Wonderware Information Server configuration, an error message will appear in the Configuration Utility stating: "SQL Server client components not found." To work around this issue, configure Wonderware Information Server to use an instance of SQL Server Express (or a non-Express edition) on a remote node.</li>
+			<li>The computing capacity of SQL Server Express 2014 with Tools SP1  is limited to the lesser of one CPU socket or four processor cores.</li>
+		</ul></li>
+  
+		<li>For InTouch HMI-only installations, the Wonderware System Platform installer will automatically install SQL Server Express 2014 with Tools SP1 if these conditions are met: 
+		<ul>
+			<li>No version of SQL Server is installed on the computer at the time of installation.</li>
+			<li>You select only the <b>InTouch Development and Runtime</b> Wonderware System Platform installation option. When you select <b>InTouch Development and Runtime</b>, a Galaxy Repository will be installed. </li>
+			<!--  <li>If you select the <b>InTouch Development and Runtime</b> feature for installation or upgrade, and your system was installed with the earlier version of SQL Server 2008 Express installed as part of Wonderware System Platform 2012 R2, the following conditions apply: 
+			<ul>
+			<li>The Wonderware System Platform 2014 installation <b>Product-specific Prerequisites</b> dialog states <b>SQL Server 2008(x86) SP3 Std/Ent (SQL Express 2008 R2 SSME for InTouch Dev only)</b> is a prerequisite for the Galaxy Repository feature, but the <b>Install Prerequisites</b> button is disabled.
+			<li>To resolve this condition, you must exit the installation program, install SQL Server 2008 R2 SP1 32-bit Express-SSME, then resume the installation. 
+			<li>To do this, you can run the SQL Server 2008 Express installation from the following Wonderware System Platform 2014 DVD media folder path: <br>
+			<b>&lt;Wonderware System Platform 2014 DVD&gt;:\InstallFiles\Redist\SQL2K8R2SSMSE\SQLEXPRWT_x86_ENU.exe</b> </li>  -->
+			</ul></li>
+		</ul>
+
+<h3><a name="SQL_Server_Notes_App_Server"></a>Additional SQL Server Notes for Wonderware Application Server </h3>
+
+    <ul style="LIST-STYLE-TYPE: disc">
+		<li>If multiple versions of SQL Server are installed, the one used as the Galaxy Repository must be the default instance. Named instances are not supported.</li>
+		<li>The Galaxy Repository locks the SQL Server maximum memory usage to 65% of the computer's physical memory. </li>
+		<li>TCP/IP must be enabled on the computer hosting a SQL Server  database. The TCP/IP protocol setting can be verified from the SQL Server Network Configuration under SQL Server ConfigurationManager. </li>
+		<li>To use the Alarm DB Logger with SQL Server Express, you need to change the default authentication mode from Windows-based to Mixed Mode. </li>
+	</ul>
+	
+<h3><a name="SQL_Server_Notes_Info_Server"></a>Additional SQL Server Notes for Wonderware Information Server</h3>
+
+	<ul>
+		<li>Named instances are not supported.</li>
+		<li>Wonderware Information Server supports case-insensitive and case-sensitive SQL Servers.</li>
+	</ul>
+
+ <!--  <h3><a name="SQL_Server_Notes_Historian"></a>Additional SQL Server Notes for Wonderware Historian Server</h3>  -->
+
+<h2><a name="Third_Party_App_Reqs"></a>Third-Party Application Prerequisites</h2>
+
+	<p>For Wonderware Historian Client:</p>
+	<ul>
+		<li>Microsoft Office is an optional prerequisite. If you install Office after installing Wonderware Historian Client, the Historian Client add-ins do not appear in the list of Office add-ins. Run the Wonderware Historian Client installation program and repair the installation to load the Office add-ins.</li>
+        <li>When you perform a custom installation of Microsoft Office 2010 or Microsoft Office 2013 (32-bit), you must install Office Shared Features and Office Tools so that the Historian add-ins for Workbook or Report can be loaded. <b>Note</b>: Make sure that you are not using the Microsoft Office 2013 (64-bit) version.<br></li>
+	</ul> 
+
+	<p>For Wonderware Information Server:</p>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" >
+<tbody>
+	<tr>
+		<td class="rowhead" width="150px">Module or Component</td>
+		<td class="colhead" width="200px">Details</td>
+        <td class="colhead" width="150px">Required Version</td>
+		<td class="colhead" width="150px">Recommended Version</td>
+	</tr>
+
+    <tr>
+		<td class="rowhead">SSRS</td>
+        <td class="cellLeft">SQL Server Reporting Services (to use the ArchestrA Reporting feature)</td>
+		<td class="cell">Any supported SQL Server version (see <a href="#SQL_Server_Reqs">SQL Server Requirements)</a></td>
+        <td class="cell">Any supported SQL Server version (see <a href="#SQL_Server_Reqs">SQL Server Requirements)</a></td>
+	</tr>
+	
+    <tr>
+		<td class="rowhead">MS Excel</td>
+		<td class="cellLeft">Microsoft Excel (to use the ActiveFactory Reporting Website feature)</td>
+		<td class="cell">2010 or 2013 (32-bit)</td>
+		<td class="cell">2010 or 2013 (32-bit)</td>
+	</tr>
+	
+    <tr>
+		<td class="rowhead">Microsoft ASP.NET</td>
+        <td class="cellLeft">Microsoft ASP.NET. The Wonderware Information Server post-installation Configurator utility automatically configures ASP.NET.</td>
+        <td class="cell">2.0 or 3.5</td>
+        <td class="cell">3.5</td>
+	</tr>
+    <tr>
+		<td class="rowhead">MSI </td>
+        <td class="cellLeft">Microsoft Windows Installer. This is included on the installation DVD and is automatically installed.</td>
+        <td class="cell">4.5 </td>
+        <td class="cell">4.5</td>
+	</tr>
+    <tr>
+		<td class="rowhead">IIS</td>
+		<td class="cellLeft">Internet Information Services. You must perform a default installation, and the Wonderware Information Server post-installation Configurator utility automatically configures IIS.</td>
+        <td class="cell">7.0, 7.5, or 8.0</td>
+        <td class="cell">7.0, 7.5, or 8.0</td>
+	</tr>
+    <tr>
+		<td class="rowhead">IE</td>
+        <td class="cellLeft">Internet Explorer (in Compatibility View mode)</td>
+        <td class="cell">8.0, 9.0, 10.0, or 11.0</td>
+        <td class="cell">11.0</td>
+	</tr>
+    <tr>
+		<td class="rowhead">OSIsoft OLE DB client connectivity software</td>
+        <td class="cellLeft">Required on the Wonderware Information Server portal node for the Information Model to connect to an OSIsoft PI Server (OLE DB) data source. </td>
+        <td class="cell">3.3.0.1a</td>
+        <td class="cell">3.3.0.1a</td>
+	</tr>
+
+    <tr>
+		<td class="rowhead">Oracle client connectivity software</td>
+        <td class="cellLeft">Required on the Wonderware Information Server portal node for the Information Model to connect to an Oracle data source. </td>
+        <td class="cell">10g and 11g</td>
+        <td class="cell">10g and 11g</td>
+	</tr>
+
+    <tr>
+		<td class="rowhead">Microsoft Office 10 client connectivity software</td>
+        <td class="cellLeft">Required on the Wonderware Information Server portal node for the Information Model to connect to text (.csv) data source. </td>
+        <td class="cell">Microsoft.ACE.OLEDB.12.0</td>
+        <td class="cell">Microsoft.ACE.OLEDB.12.0</td>
+	</tr>
+
+</tbody>
+</table>
+            
+	<p>Wonderware Information Server supports IPv4 only.</p>
+
+	<p>You must install Microsoft Excel 2013 (32-bit) with the Visual Basic for Applications feature on the Wonderware Information Server computer in order for Wonderware Historian Client published reports to be viewed. The 64-bit version of Excel is not compatible.</p>
+
+	<p>The Wonderware Information Server installation program scans for these components. If the MSXML and Capicom components are not installed, the installation program silently installs them to the target computer. Note the following important information regarding individual components:</p>
+	
+<table style="width: 1100px; text-align: left;" border="0" cellpadding="5" cellspacing="1">
+<tbody>
+	<tr>
+		<td style="vertical-align: top; text-align: left;" colspan="2"><span style="font-weight: bold;">SQL Server Reporting Services</span>:</td>
+		<td style="vertical-align: top; text-align: left;" colspan="2">To use the ArchestrA Reporting feature, you must install and configure SQL Server Reporting Services and set up a reporting database before configuring the ArchestrA Reports feature in Wonderware Information Server. The versions of SQL Server and SQL Server Reporting Services used must match (for example, both 2008).</td>
+	</tr>
+    <tr>
+		<td style="vertical-align: top; text-align: left;" colspan="2"><span style="font-weight: bold;">WebDAV Feature</span>:</td>
+        <td style="vertical-align: top; text-align: left;" colspan="2">For the Process Graphics feature to work, WebDAV is automatically installed during configuration of the Wonderware Information Server. You can manually download WebDAV from the following links: 
+		<ul>
+			<li>For 32 bit Windows 2008 R2, visit <a href="http://www.wonderware.com/WIS/webDAVx86" target="_blank">www.wonderware.com/WIS/webDAVx86</a></li>
+			<li>For 64 bit Windows 2008 R2, visit <a href="http://www.wonderware.com/WIS/webDAVx64" target="_blank">www.wonderware.com/WIS/webDAVx64</a></li>
+		</ul>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+<h1><a name="Component_Compatibility"></a>Wonderware Product Compatibility</h1>
+
+	<p><b>In a single-node environment</b>, if you need to combine multiple products delivered within Wonderware System Platform 2014 R2 SP1, all the products need to be at the same version delivered in Wonderware System Platform 2014 R2 SP1.
+	<br><br><b>In a node-to-node environment</b>, products are compatible between the current licensed version and one licensed version back. </p>
+	<p></p>
+	<p>Compatibility means that the products can communicate with each other over the network. Co-existence means that the products can be installed on the same computer.</p>
+
+	<p>In some cases, Wonderware System Platform is supported in newer environments than a compatible product.  Wonderware System Platform has been tested for compatibility with a listed product only in the environments that are supported by that particular product.</p>
+	
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" width="700">
+<tbody>
+	<tr>
+		<td width="370" class="colhead">Product</td>
+        <td width="130" class="colhead">Version</td>
+        <td width="100" class="colhead">Compatibility</td>
+        <td width="100" class="colhead">Co-existence</td>
+    </tr>
+
+	<tr>
+        <td class="rowhead" rowspan="10">Wonderware System Platform</td>
+        <td class="cell" style="TEXT-ALIGN: left">4.5</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supported">N/A</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2012</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2012 R2</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2012 R2 P01</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+	</tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2012 R2 P02</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2012 R2 P03</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2014</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2014 P01</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+    </tr>
+	  
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2014 R2</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+    </tr>
+	  
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2014 R2 P01</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+      </tr>
+
+    <tr>
+        <td class="rowhead">Wonderware
+          InTouch CE</td>
+        <td class="cell" style="TEXT-ALIGN: left">10.1</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+
+    <tr>
+        <td class="rowhead" rowspan="5">Wonderware
+        Manufacturing Execution System</td>
+        <td class="cell" style="TEXT-ALIGN: left">4.0 SP1</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">4.0 SP2</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+    <tr>
+        <td class="cell" style="TEXT-ALIGN: left">4.5 (2012) P01</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+    <tr>
+        <td class="cell" style="TEXT-ALIGN: left">5.0 (2014)</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+    <tr>
+        <td class="cell" style="TEXT-ALIGN: left">5.0.1 (2014 SP1)</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+
+    <tr>
+        <td class="rowhead" rowspan="2">Recipe Manager Plus</td>
+        <td class="cell" style="TEXT-ALIGN: left">2.0 2014R2</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.0 2014R3</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+
+    <tr>
+        <td class="rowhead">Wonderware
+          InControl&trade;</td>
+        <td class="cell" style="TEXT-ALIGN: left">7.11 SP2 P01</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+
+	<tr>
+        <td class="rowhead">Wonderware
+        Manufacturing Execution Module</td>
+        <td class="cell" style="TEXT-ALIGN: left">1</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+    <tr>
+        <td class="rowhead" rowspan="4">Wonderware InBatch&trade; <br><br>* <span style="font-weight:normal; font-size:11">If you are using Wonderware Information Server with InBatch software, upgrading to Wonderware Information Server 5.6 requires an InBatch hotfix to maintain compatibility.</span></td>
+        <td class="cell" style="TEXT-ALIGN: left">10.0 (2012 R2)</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.1 (2014)</td>
+        <td class="supportedSmall">Y *</td>
+        <td class="supportedSmall">Y *</td>
+    </tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.2 (2014 R2)</td>
+        <td class="supportedSmall">Y *</td>
+        <td class="supportedSmall">Y *</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">11.0 (2014R2 SP1`)</td>
+        <td class="supportedSmall">Y *</td>
+        <td class="supportedSmall">Y *</td>
+    </tr>
+    <tr>
+        <td class="rowhead" rowspan="3">Wonderware QI Analyst&trade;</td>
+        <td class="cell" style="TEXT-ALIGN: left">8.0 SP1 P01</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">8.0 SP2</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">8.0 SP3</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+    <tr>
+        <td class="rowhead">Wonderware
+        SCADAlarm&trade;</td>
+        <td class="cell" style="TEXT-ALIGN: left">6.0 SP2 P01</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr> 
+    <tr>
+        <td class="rowhead" rowspan="3">Wonderware
+          Intelligence</td>
+        <td class="cell" style="TEXT-ALIGN: left">1.5</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">1.5.100 (2012)</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2.0 P01 (2014R2 P01)</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+    <tr>
+        <td class="rowhead" rowspan="5">ArchestrA
+        Workflow&trade;</td>
+        <td class="cell" style="TEXT-ALIGN: left">1.5 (2012)</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">1.6 (2012 SP1)</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">1.7 (2012 R2)</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">1.8</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">1.9 (2012 R2 SP1)</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+    </tr>
+
+	<tr>
+       <td class="rowhead" rowspan="3">Wonderware
+        Skelta BPM</td>
+        <td class="cell" style="TEXT-ALIGN: left">2014</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportednotSmall">N</td>
+	</tr>
+	         <td class="cell" style="TEXT-ALIGN: left">2014R2</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+	</tr>
+		<td class="cell" style="TEXT-ALIGN: left">2014R2 SP1</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+	</tr>
+    <tr>
+        <td class="rowhead">Wonderware PEM</td>
+        <td class="cell" style="TEXT-ALIGN: left">2.1 SP1</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="rowhead">Wonderware Online (see components below)</td>
+		<td class="cell" style="TEXT-ALIGN: left">1.0</td>
+        <td class="graySmall" style="font-weight: normal; font-size: 0.6em; text-align: center;">&nbsp;</td>
+        <td class="graySmall" style="font-weight: normal; font-size: 0.6em; text-align: center;">&nbsp;</td>
+    </tr>
+	<tr>
+		<td class="rowhead"><ul><li>Historian Client Trend</li></ul></td>
+	    <td class="cell" style="TEXT-ALIGN: left">10.6</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+		<td class="rowhead"><ul><li>InTouch</li></ul></td>
+        <td class="cell" style="TEXT-ALIGN: left">11.0 and 11.1</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+		<td class="rowhead"><ul><li>MRC (Mobile Report Connector)</li></ul></td>
+        <td class="graySmall" style="font-weight: normal; font-size: 0.6em; text-align: center;">&nbsp;</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+
+	<tr>
+        <td class="rowhead" rowspan="2">Recipe Manager Plus
+        PEM</td>
+        <td class="cell" style="TEXT-ALIGN: left">1.0 (2014)</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">1.5 (2014 R2)</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="rowhead " rowspan="3">Schneider Electric Citect-VJC</td>
+        <td class="cell" style="TEXT-ALIGN: left">7.2 SP3</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">7.3 SP3</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">7.4 SP1</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="rowhead" rowspan="4">Schneider Electric ClearSCADA</td>
+        <td class="cell" style="TEXT-ALIGN: left">CS 2013 R1</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">CS 2013 R2</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">CS 2014 R1</td>
+        <td class="supportednotSmall">N</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">CS 2015 R1</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+</tbody>
+</table>
+	<br>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" width="200">
+<tbody>
+    <tr>
+        <td style="font-weight: normal; font-size: 0.7em;">Supported</td>
+        <td class="supportedSmall" style="font-weight: normal; font-size: 0.7em; text-align: center;">Y</td>
+    </tr>
+    <tr>
+        <td style="font-weight: normal; font-size: 0.7em;">Not Supported</td>
+        <td bgcolor="#ffc3ab" class="supportednotSmall" style="font-weight: normal; font-size: 0.7em; text-align: center; color: rgb(216, 28, 63);">N</td>
+    </tr>
+</tbody>
+</table>
+	<p>&nbsp;</p>
+ 	<p><b>Notes:</b> </p>
+	<ul>
+		<li>The extended features of the ArchestrA Web Exporter only support ArchestrA Symbols and InTouchViewApp applications from Wonderware Application Server 3.1 or later, InTouch HMI 10.0 SP2 or later, and InTouch HMI 10.1 or later. </li>
+		<li> HTTP access to Historian Server is not supported in this version. </li>
+		<li>Publishing from ActiveFactory 9.2, Historian Client 10.0, 10.0 SP1, and 10.0 SP2  is supported. </li>
+        <li>Opening of already published Historian Client workbook reports and trends (published from an old version of Historian Client) in Wonderware Information Server 4.5  is supported. </li>
+		<li>Publishing from ActiveFactory 9.2, Historian Client 10.0, 10.0 SP1, and 10.0 SP2  to Wonderware Information Server versions prior to 4.5  is not supported. </li>
+		<li>If you are using FCS with Wonderware Information Server, note that a direct upgrade from Wonderware System Platform 4.5 to 5.1 is not supported for FCS. You must first upgrade to Wonderware System Platform 5.0. </li>
+		<li>Wonderware System Platform 2014 R2 SP1 is not compatible with the Skelta BPM 2014 Connector for System Platform. Please contact your Wonderware sales representative for the availability of an updated Skelta BPM 2014 Connector for System Platform. </li>
+	</ul>
+  
+	<p>The product compatibility information contained in this Wonderware System Platform 2014 R2 SP1 Readme supersedes information contained in other product Readme files delivered on the Wonderware System Platform 2014 R2 SP1 DVD. In any instance where conflicting information occurs, this Readme is the more up-to-date and should be taken as correct. The Wonderware InTouch HMI 2014 R2 SP1 Readme duplicates some of the same information contained in this Readme, but is focused on InTouch HMI.</p>
+
+<h1><a name="Installation_Notes" id="Installation_Notes"></a>Wonderware System Platform Installation</h1>
+
+	<p>For detailed installation instructions in English, see the <i>Wonderware System Platform Installation Guide</i> (WSP_Install_Guide.pdf) or Wonderware System Platform	Installation Help (WSP_Install_Guide.chm). This guide supersedes the separate installation guides for the individual products. The Installation Guide pdf file is located in the root directory of the Wonderware System Platform 2014 R2 installation DVD. The Installation Help chm file is located in the InstallFiles directory of the installation DVD.
+	<br>The information provided in this Readme file and the InTouch Readme file supersedes the InTouch HMI Installation Help (Install-InTouch.chm) for the French, German, Japanese, and Simplified Chinese languages.</p>
+
+<h2><a name="Before_Install"></a>Before Installing Wonderware System Platform 2014 R2 SP1</h2>
+
+	<ul>            
+        <li>Installing Wonderware System Platform 2014 R2 SP1 on a computer used as a domain controller is not supported. For more information, see <a href="http://technet.microsoft.com/library/Cc966456" target="_blank"> http://technet.microsoft.com/library/Cc966456. </a> </li>
+		<li>If Recipe Manager Plus will be installed on the same computer as Wonderware System Platform 2014 R2 SP1, install Recipe Manager Plus first. Wonderware System Platform 2014 R2 SP1 is installed with the latest version of ArchestrA Service Bus (ASB).</li>
+	</ul>
+
+<h2>About the ArchestrA User Account</h2>
+
+	<p>The ArchestrA user account is a user name and password combination that enables inter-node communication between all computers in an ArchestrA environment. You must specify the same user account on every node when you install the Wonderware System Platform components for the first time on computers that communicate with each other. </p>
+	<p><b>WARNING!</b> The ArchestrA user account is a Windows operating system account located on the local computer or on a domain. Do not delete this account with operating system account management tools. If you do, ArchestrA-enabled software may stop functioning properly. </p>
+    <p>If the ArchestrA user account has not previously been configured, you will be prompted to configure it during the Wonderware System Platform 2014 R2 SP1 installation. You must specify a user name, password, and domain.</p>
+	<p>If you choose to use an existing user account, it should meet the following requirements:</p>
+	<ul>
+		<li>User account with a permanent password that does not expire. </li>
+		<li>User account in which the password cannot be changed. </li>
+        <li>User account that is a member of the local Administrators group.</li>
+	</ul>
+	<p>After you install a Wonderware System Platform component, you can use the ArchestrA Change Network Account utility to change or re-create the ArchestrA user account. This utility is located in the Common folder after you install InTouch HMI. You must have Administrator privileges on the computer to make changes with the Change Network Account utility. For more information, see the Change Network Account utility help.</p>
+	<p class="note"><b>Note:</b> If you re-create the user account using the Change Network Account utility, the Microsoft Windows security component on the computer can take several minutes to update this information on the ArchestrA Galaxy node. Until that occurs, the ArchestrA component may not function properly. Restarting the Galaxy node updates this information immediately.</p>
+          
+<h1><a name="Upgrade_Migration"></a>Wonderware System Platform Upgrade and Migration</h1>
+
+	<ul>
+		<li><a href="#Upgrade_Migration_Notes">Wonderware System Platform Upgrade and Migration Notes</a></li>
+		<li><a href="#AppServer_Upgrade_Notes">Application Server Upgrade and Migration Notes</a></li>
+		<li><a href="#InTouch_Upgrade_Notes">InTouch and InTouch Access Anywhere Upgrade and Migration Notes</a></li>
+		<li><a href="#Historian_Upgrade_Notes">Wonderware Historian Upgrade and Migration Notes</a></li>
+		<li><a href="#Client_Upgrade_Notes">Wonderware Historian Client Upgrade and Migration Notes</a></li>
+		<li><a href="#WII_Upgrade_Notes">Wonderware Information Server Upgrade and Migration Notes</a></li>
+    </ul>	
+	<p>The following table shows supported versions for upgrade and migration.</p>
+	<p>Upgrading is installing a newer version of the software when a previous version of the software exists. An upgrade is possible when the system requirements (operating system, SQL Server, .NET Framework) are met. The upgrade process will properly remove or  uninstall the previous software version and install the new version. For versions older than the current and previous licensed versions, only the latest service pack or patch versions are tested. For distributed systems, some products must be upgraded in a particular order. For more information, see upgrade information for each product in the <i>Wonderware System Platform Installation Guide.</i></p>
+
+	<p>The earliest version of Windows supported by Wonderware System Platform 2014 R2 SP1 is Windows 7 SP1, and the first version of Application Server and InTouch that supported Windows 7 SP1 was Application Server 3.1 SP3 and InTouch 10.1 SP3. Therefore, to upgrade from versions of Application Server earlier than 3.1 SP3 or InTouch earlier than 10.1 SP3 to Wonderware System Platform 2014 R2 SP1, you must manually uninstall the Wonderware software, upgrade to or replace with a compatible operating system, and then perform a fresh install of Wonderware System Platform 2014 R2 SP1.</p>
+
+	<p>Migration is the process of converting applications that have been created in a previous version of a product to the current version. For versions older than the current and previous licensed versions, only the latest service pack or patch versions are tested.</p>
+
+	<p><b>IMPORTANT!</b> Back up any relevant application configuration files or databases before you start an upgrade or migration.</p>
+  
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" >
+<tbody>
+    <tr>
+        <td width="260" class="rowhead">Product</td>
+        <td width="260" class="rowhead">From</td>
+        <td width="100" class="colhead">Upgrade</td>
+        <td width="100" class="colhead">Node-by-Node Upgrade</td>
+        <td width="100" class="colhead">Migrate</td>
+    </tr>
+
+	<tr>
+        <td class="rowhead" rowspan="7">Wonderware System Platform</td>
+        <td class="cell" style="TEXT-ALIGN: left">4.5</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2012</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2012 R2</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2012 R2 P01</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2014</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2014 R2</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2014 R2 P01</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+
+	<tr>
+        <td class="rowhead" rowspan="11">Wonderware Application Server</td>
+        <td class="cell" style="TEXT-ALIGN: left">2.0 P01</td>
+        <td class="supportednot">N</td>
+        <td class="supportednot">N</td>
+        <td class="supportednot">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2.1 P02</td>
+        <td class="supportednot">N</td>
+        <td class="supportednot">N</td>
+        <td class="supportednot">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2.5</td>
+        <td class="supportednot">N</td>
+        <td class="supportednot">N</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.0 SP2</td>
+        <td class="supportednot">N</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.1 (no SP)</td>
+        <td class="supportednot">N</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.1 SP1</td>
+        <td class="supportednot">N</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.1 SP2</td>
+        <td class="supportednot">N</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.1 SP2 P01</td>
+        <td class="supportednot">N</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.1 SP3</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.1 SP3 P01</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.2 and later, see System Platform product</td>
+        <td class="supported">N/A</td>
+        <td class="supported">N/A</td>
+        <td class="supported">N/A</td>
+    </tr>
+
+	<tr>
+        <td class="rowhead" rowspan="17">Wonderware
+          InTouch</td>
+        <td class="cell" style="TEXT-ALIGN: left">7.0</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supportednot">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">7.1</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supportednot">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">7.11 P07</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">8.0 SP2 P04</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">9.0 P03</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">9.5 SP1</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.0 SP2</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.1 (no SP)</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.1  SP2</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.1 SP2 P01</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.1 SP3</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.1 SP3 P01</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.2</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.5</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.6</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">11.0</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">11.0 P01</td>
+        <td class="supportedSmall">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supportedSmall">Y</td>
+    </tr>
+	<tr>
+        <td class="rowhead" rowspan="4">Wonderware Historian</td>
+        <td class="cell" style="TEXT-ALIGN: left">8.0 SP3 P01</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supportednot">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">9.0 P02</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.0 SP1</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">For 11.0 and later, see System Platform.</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	 
+	<tr>
+        <td class="rowhead" rowspan="6">Wonderware Historian Client</td>
+        <td class="cell" style="TEXT-ALIGN: left">9.2</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">9.5</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.0</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.0 SP1</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	 
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.1</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">10.5</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+
+	<tr>
+        <td class="rowhead" rowspan="6">Wonderware Information Server <br>(Portal and Client)</td>
+        <td class="cell" style="TEXT-ALIGN: left">3.1</td>
+        <td class="supportednot">N</td>
+        <td class="supported">N/A</td>
+        <td class="supportedNOT">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">4.0</td>
+        <td class="supportedNOT">N</td>
+        <td class="supported">N/A</td>
+        <td class="supportedNOT">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">4.0 SP1</td>
+        <td class="supportedNOT">N</td>
+        <td class="supported">N/A</td>
+        <td class="supportedNOT">N</td>
+    </tr>
+	 
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">5.0</td>
+        <td class="supportedNOT">N</td>
+        <td class="supported">N/A</td>
+        <td class="supportedNOT">N</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">5.0 P01</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">5.5</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	  
+	<tr>
+        <td class="rowhead" rowspan="3">FS Gateway</td>
+        <td class="cell" style="TEXT-ALIGN: left">1.5</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">2.0</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr>
+	<tr>
+        <td class="cell" style="TEXT-ALIGN: left">3.0, 3.0 SP1</td>
+        <td class="supported">Y</td>
+        <td class="supported">N/A</td>
+        <td class="supported">Y</td>
+    </tr> 
+</tbody>
+</table>
+<p></p>
+
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" width="200">
+<tbody>
+	<tr>
+		<td style="font-weight: normal; font-size: 0.7em;">Supported</td>
+        <td class="supportedSmall" style="font-weight: normal; font-size: 0.7em; text-align: center;">Y</td>
+	</tr>
+    <tr>
+		<td style="font-weight: normal; font-size: 0.7em;">Not Supported</td>
+        <td bgcolor="#ffc3ab" class="supportednotSmall" style="font-weight: normal; font-size: 0.7em; text-align: center; color: rgb(216, 28, 63);">N</td>
+	</tr>
+</tbody>
+</table>
+			
+<h2><a name="Upgrade_Migration_Notes"></a>Wonderware System Platform Upgrade and Migration Notes</h2>
+	
+	<p><SPAN style="FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: red; FONT-FAMILY: Verdana">Important Note:</SPAN> If you plan to upgrade Wonderware System Platform on a computer that has InTouch Access Anywhere Server installed, you must first uninstall the InTouch Access Anywhere Server. Then, upgrade Wonderware System Platform and finally reinstall InTouch Access Anywhere Server.</p>
+	<p>Back up any custom configuration of the installed instance of InTouch Access Anywhere before you uninstall it.</p>
+
+
+<h2><a name="AppServer_Upgrade_Notes"></a>Application Server Upgrade and Migration Notes</h2>
+
+	<p>If you are upgrading Wonderware Application Server to the new Wonderware System Platform 2014 R2 SP1 version, be aware of the following: </p>
+
+	<ul>
+		<li>Back up the Galaxy  before starting the upgrade. Also, upload any run-time changes for critical objects. You cannot upload any run-time changes after you upgrade the system. For more information, see the Wonderware System Platform Installation online help.</li>
+              
+		<li>Upgrading to Wonderware Application Server 2014 R2 SP1 will affect run-time nodes. Node-by-node upgrade is supported with limitations. Changing the security or history model in a node-by-node upgrade of the run-time nodes is not supported. Nodes that are currently deployed will not receive any history or security changes from the upgraded Galaxy Repository node.</li>
+              
+        <li>Installing Wonderware Application Server 2014 R2 SP1 automatically undeploys any platform that is currently deployed in the node that is being updated. Changes to the WinPlatform object and other components require any deployed platforms to be redeployed. </li>
+		
+		<li>When upgrading SQL Server on the Galaxy Repository node, back up the Galaxy before starting the upgrade. Upload any run-time changes for critical objects. You cannot upload any run-time changes after you upgrade the system. For more information, see the Wonderware Application Server Installation online Help.</li>
+
+		<li>If Wonderware Application Server is installed on the same node as Wonderware InTouch HMI, both must be upgraded to Wonderware System Platform 2014 R2 SP1 versions, and you must upgrade Wonderware Application Server before upgrading InTouch HMI.</li>
+	<!--
+		<li>You must install Wonderware Historian 9.0 Patch 02 or Historian 10.0 or later to take advantage of new Historian features including time propagation and late data from the Wonderware Application Server to the Historian. These versions are also required to leverage the new Historian configuration options from the IDE.</li>
+	-->
+		<li>If the ArchestrA IDE currently connects remotely to the Galaxy Repository on another computer, install Wonderware Application Server 2014 R2 SP1 on both nodes. A remote connection between the ArchestrA IDE and the Galaxy Repository fails if the nodes have different versions of Wonderware Application Server. </li>
+  
+		<li>It is strongly recommended that you undeploy the platform prior to upgrading the software in that node. Once the Galaxy Repository node is upgraded from any prior version to version 4.1 SP1, all run-time nodes hosting Wonderware InTouch applications  must have both Wonderware Application Server upgraded to 2014 R2 SP1 (if you are running InTouch applications). You will not be able to deploy or undeploy objects on non-upgraded nodes. Installing the software on a run-time node will remove the running platform and objects. The platform and objects can then be redeployed after the software upgrade is complete.</li>
+		
+        <li>Upgraded IDE/Client nodes cannot connect to a non-upgraded Galaxy Repository and vice-versa. </li>
+		
+        <li>The Galaxy Repository node will be undeployed before upgrading to Wonderware Application Server 2014 R2 SP1.</li>
+		
+        <li>Running platforms must be undeployed during the upgrade process.</li>
+		
+        <li>WinPlatform and other related objects on a remote node will be marked as "software update pending". </li>
+		
+		<li>You will not be able to deploy from an upgraded Galaxy Repository node to non-upgraded remote nodes. </li>
+
+		<li>While migrating the GR node, the existing database schema is migrated to the new version 2014 R2 SP1 schema. The GR node migration fails if the GR node is used as a run-time node for another GR.</li>
+
+		<li><b>IMPORTANT!</b> If the Wonderware Historian will be used to collect data from Application Server, upgrade the Historian to 2014 R2 SP1 before upgrading any Application Server Platforms to 2014 R2 SP1.</li>
+	</ul>
+
+<h2><a name="InTouch_Upgrade_Notes"></a>InTouch and InTouch Access Anywhere Upgrade and Migration Notes</h2>
+	<!--
+		<p><SPAN style="FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: red; FONT-FAMILY: Verdana">Important Note:</SPAN> The InTouch Access Anywhere Server has been updated to resolve a security vulnerability to a buffer overflow. You must uninstall InTouch Access Anywhere version 11.0 from all InTouch nodes where it is installed and install InTouch Access Anywhere version 11.1 SP1 that is in Wonderware System Platform 2014 R2 SP1.</p>
+	
+		<p>You can determine the version of InTouch Access Anywhere Server installed on a computer using <b>Programs and Features</b> from the Windows Control Panel.</p>
+
+		<p> If you are upgrading Wonderware InTouch HMI to the new Wonderware System Platform 2014 R2 SP1 version, be aware of the following:</p>
+
+	<ul>
+		<li>InTouch Development (WindowMaker<sup>&#8482;</sup>) is now installed with support for ArchestrA graphics. This includes the ArchestrA Integrated Development Environment (IDE), Bootstrap, Galaxy Repository (GR), and FS Gateway.</li>
+		<li>FactorySuite Gateway (FS Gateway) 3.0 SP2 was installed as part of InTouch HMI 2014 R2 in an Wonderware System Platform 2014 R2 installation. If you originally installed FS Gateway 2.0 SP1 without any other InTouch products, then upgrading Wonderware System Platform 2012 R2 to Wonderware System Platform 2014 R2 SP1 will not upgrade FSGateway to version 3.0 SP2. You must uninstall FSGateway 2.0 SP1 before upgrading to Wonderware System Platform 2014 R2 SP1.</li>
+        <li>If SQL Server does not exist on the system, SQL Server Express is installed automatically.</li>
+		<li>If the added features are not needed in your current environment, you will need to use the Wonderware System Platform "product-based" installation on a "clean" system. The product-based installation provides a customization option so that you can deselect any components that are not needed. Note that the customization option is not available if you are upgrading an existing system from a previous version of InTouch Development.</li>
+		<li>If Wonderware Application Server is installed on the same node as Wonderware InTouch HMI, both must be upgraded to ArchestrA 2014 R2 SP1 versions, and you must upgrade Wonderware Application Server before upgrading InTouch HMI.</li>
+		<li>If you are using managed InTouch applications with ArchestrA Symbols from Application Server 3.1 SP3 or earlier, run the <b>ArchestrA Symbol Analysis and Repair Utility</b> before installing Wonderware Application Server 2014 R2 SP1 to ensure that all issues reported by the utility are addressed. You can download the utility from the <a href="https://wdn.wonderware.com/sites/WDN/Pages/Downloads/Utilities.aspx">Wonderware  Developers' Network (WDN), Software Downloads</a>. Log in to WDN with your username and password to access the downloads archive.</li>
+	</ul>
+-->
+<h2><a name="Historian_Upgrade_Notes"></a>Wonderware Historian Upgrade and Migration Notes</h2>
+
+	<p>It is possible to upgrade from earlier versions of Wonderware Historian than 10.1, but you must first upgrade to the 10.1 version. Follow the instructions in the 10.1 documentation to perform the upgrade. After you have upgraded to the 10.1 Historian, you can then upgrade to Wonderware Historian 2014 R2 SP1. </p>
+
+	<p><b>IMPORTANT!</b> If the Wonderware Historian will be used to collect data from Application Server, upgrade the Historian to 2014 R2 SP1 before upgrading any Application Server Platforms to 2014 R2 SP1.</p>
+
+<h2><a name="Client_Upgrade_Notes"></a>Wonderware Historian Client Upgrade and Migration Notes</h2>
+
+	<p> The application files created with ActiveFactory 9.2, Wonderware Historian Client 9.5, Wonderware Historian Client 10.0, Wonderware Historian Client 10.0 SP1, Wonderware Historian Client 10.0 with SP2, Wonderware Historian Client 2012 R2 software require no modifications to be used with the Wonderware Historian Client 2014 R2 SP1 software. Optionally, the application files can be migrated to take advantage of new retrieval features. For more information, see the <i>Wonderware Historian Client User's Guide</i>.</p>
+
+	<p>You can open Trend, Query, Workbook, and Report files created using ActiveFactory versions 9.0, 9.1, 9.2, and Wonderware Historian Client versions 9.5, 10.0, 10.0 SP1, 10.0 with SP2, and 10.1. These documents are converted and saved to the format used by Wonderware Historian Client 2014 R2 SP1. ActiveX and .NET applications built using ActiveFactory 8.5, 9.0, 9.1, 9.2, and Wonderware Historian Client 9.5, 10.0, 10.0 SP1, 10.0 with SP2, and 10.1 controls continue to operate without changes to their original functionality.</p>
+
+<h2><a name="WII_Upgrade_Notes"></a>Wonderware Information Server Upgrade and Migration Notes</h2>
+
+	<p> Direct upgrade from Wonderware Information Server v 5.0 and earlier versions is not supported. Earlier versions of Wonderware Information Server have to upgrade through Wonderware Information Server v5.0 P01 to be upgraded to Wonderware Information Server v5.6.  For more information, see the <i>Wonderware System Platform Installation Guide</i>.</p>
+
+
+	<p> Wonderware Information Server version 5.6 supports and requires Silverlight 5.0 for ArchestrA Graphics to function correctly. The published ArchestrA Graphics from Wonderware Information Server version 5.5 or earlier can only support Silverlight 4.0 or an earlier version and hence, using the existing published ArchestrA Graphics would be not correct.<br>
+    <p> After you upgrade an earlier version of Wonderware Information Server to 5.6 or later, you must reconvert and republish all the existing published ArchestrA Graphics, including ArchestrA Symbols in Table Weaver, using the new ArchestrA Web Exporter.</p>              
+    <p>If you are using Wonderware Information Server with InBatch software, upgrading to Wonderware Information Server 5.6 requires an InBatch hotfix to maintain compatibility. Contact Wonderware customer support to obtain the hotfix.</p>        
+
+	<p>&nbsp;</p>
+       
+<h1><a name="Licensing_Info"></a>Licensing Information</h1>
+
+	<p>Once installed, the ArchestrA License Manager can be found in the <b>\Invensys</b> folder on the <b>Start</b> menu rather than in the old License Utility folder, <b>\Wonderware\Common</b>.</p>
+
+<h2>License Server</h2>
+
+	<p>Wonderware Information Server 2014 R2 supports using a centralized licensing server to manage client licenses. For more information, see the <em>Invensys License Manager Guide</em> and the license server documentation in the \InstallFiles\CD-Licensing\UserDocs folder of the Wonderware Information Server 2014 R2 installation media.</p>
+	<p>You can install the License Server as part of any Wonderware System Platform installation. If you install Wonderware Information Server, the License Server automatically installs whether or not you specifically selected it for installation. </p>
+			
+<h1><a name="Antivirus_Software_Exclusions" id="Antivirus_Software_Exclusions"></a>Antivirus Software Exclusions</h1>
+
+	<p>Configure your antivirus software to prevent archive files from being scanned. </p>
+	<p class="note"><b>Important Note:</b> The paths listed here may be different based on your installation. If you are using Wonderware Historian, be sure to exclude any folder that contains history blocks.</p>
+
+	<ul>
+		<li>Exclude the files in the lowest level subfolder of the listed directories in this section. Antivirus exclusions should not be recursive and should only apply to the lowest listed subfolder in the specified folder path. </li>
+		<li>If you are using a 64-bit operating system, folder names must be specified accordingly. For example, the program files root directory in a 64-bit operating system is C:\Program Files (x86)\... and the application data root directory in a 32-bit operating system is C:\ProgramData\... </li>
+	</ul>
+    
+	<p>Exclude these ArchestrA folders in a 32-bit system: </p>
+    <ul>
+		<li>C:\ProgramData\ArchestrA\ and all subfolders</li>
+		<li>C:\Program Files\ArchestrA\</li>
+		<li>C:\Program Files\Common Files\ArchestrA\</li>
+		<li>C:\Program Files\FactorySuite\ (The FactorySuite folder may not exist in newer installations)</li>
+		<li>C:\Program Files\Wonderware\</li>
+		<li>C:\Users\All Users\Wonderware</li>
+		<li>C:\InSQL\Data\  (The InSQL folder may not exist in newer installations)</li>
+		<li>C:\Historian\Data</li>
+	</ul>
+	
+	<p>Exclude these ArchestrA folders in a 64-bit system:</p>
+	<ul>
+		<li>C:\ProgramData\ArchestrA\ and all subfolders</li>
+		<li>C:\Program Files\Common Files\ArchestrA\</li>
+		<li>C:\Program Files (x86)\ArchestrA\</li>
+		<li>C:\Program Files (x86)\Common Files\ArchestrA\</li>
+		<li>C:\Program Files (x86)\FactorySuite\ (The FactorySuite directory may not exist in newer installations)</li>
+		<li>C:\Program Files (x86)\Wonderware\</li>
+		<li>C:\Users\All Users\Wonderware\</li>
+		<li>C:\Users\Public\Wonderware\
+		<li>C:\InSQL\Data\ (The InSQL folder may not exist in newer installations)</li>
+		<li>C:\Historian\Data\</li>
+	</ul>
+    <p>Exclude these folders:</p>
+	<ul>
+		<li>History Store Forward directory in 32- and 64-bit systems:
+        <ul>
+			<li>C:\Users\All Users\ArchestrA\ (default location)</li>
+        </ul></li>
+        <li>Checkpoint directory location default location in a 32-bit system:
+        <ul>
+			<li>C:\Program Files\ArchestrA\Framework\bin\ </li>
+		</ul></li>
+
+ 		<li>Checkpoint directory location default location  in a 64-bit system:
+		<ul>
+			<li>C:\Program Files (x86)\ArchestrA\Framework\bin\ </li>
+        </ul></li>
+        <li>InTouch HMI Application folder path:
+        <ul>
+			<li>C:\Users\Public\Wonderware\IntouchApplications (default folder path)</li>
+			<li>You can select an application folder path when an InTouch HMI application is created</li>
+</li>
+        </ul></li>
+		<li>SMC Logger Storage file path:
+        <ul>
+			<li>C:\ProgramData\ArchestrA\LogFiles\</li>
+			<li>C:\Documents and Settings\All Users\Application data\Archestra\LogFiles\</li>
+        </ul></li>
+	</ul>
+
+    <p>Exclude these folders for Wonderware Information Server: </p>
+    <ul>
+        <li>c:\inetpub\wwwroot\Wonderware\ </li>
+		<li>c:\inetpub\wwwroot\AFWeb\ </li>
+		<li>c:\inetpub\wwwroot\aaFlexLicWebService\ </li>
+		<li>c:\Program Files\Wonderware\SuiteVoyager\ </li>
+	</ul>
+    <p>Exclude these files from the C:\Windows\Temp folder: </p>
+    <ul>
+    <li>*.aFDX</li>
+	</ul>
+
+	<p>Location of SQL Server database files to be excluded:
+  	<ul>
+	<li>32-bit systems:
+	<ul><li>C:\Program Files\Microsoft SQL Server\MSSQL&lt;<em>xx</em>&gt;.MSSQLSERVER\MSSQL\DATA\ (&lt;<em>xx</em>&gt; will vary by SQL Server version)</li></li></ul>
+	<li>64-bit systems:
+	<ul><li>C:\Program Files (x86)\Microsoft SQL Server\MSSQL&lt;<em>xx</em>&gt;.MSSQLSERVER\MSSQL\DATA\ (&lt;<em>xx</em>&gt; will vary by SQL Server version)</li></li></ul>
+	
+	<li>Exclude SQL Server database files within this directory of the following types:
+		<ul>
+            <li>.mdf </li>
+            <li>.ldf</li>
+		</ul></li>
+	
+	<li>You can also exclude these file types (optional): </li>
+	<ul>
+        <li>*.idx</li>
+        <li>*.pdx </li>
+	</ul>
+	</ul>
+
+<h1><a name="Resolved_Issues"></a>Resolved Issues</h1>
+
+	<p>This section documents important resolved issues broadly categorized as Wonderware System Platform-level issues. This list is not comprehensive. Additional resolved issues are documented in the product-specific Readme files. </p>
+
+	<ul>
+		<li><a href="#Resolved_Issues_ASB">ArchestrA Service Bus and Multi-Galaxy Communication Issues</a></li>
+		<li><a href="#Resolved_Issues_InTouch">InTouch HMI Issues</a></li>
+	</ul>
+
+	
+<h2><a name="Resolved_Issues_ASB"></a>ArchestrA Service Bus and Multi-Galaxy Communication Issues</h2>
+
+<TABLE style="TEXT-ALIGN: left" cellSpacing=2 cellPadding=5 border=1 width="1055">
+
+<TR>
+    <TD width="35" style="FONT-WEIGHT:bold; VERTICAL-ALIGN:top; TEXT-ALIGN:center">Original Change Request</TD>
+    <TD width="20" style="FONT-WEIGHT:bold; VERTICAL-ALIGN:top; TEXT-ALIGN:center">Related Change Requests</TD>
+    <TD width="885" style="FONT-WEIGHT:bold; VERTICAL-ALIGN:top; TEXT-ALIGN:center">Description</TD>
+</TR>
+  <TBODY>
+  
+  <tr>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139416</span></td>
+	<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139753</span></td>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold"></span> Multiple warning messages appeared in the Logger during a Galaxy undeploy operation. The warning messages were logged from the aaConfigurationServiceHost component. 
+	</td>
+  </tr>
+  
+</tbody>
+</table>
+
+<h2><a name="Resolved_Issues_InTouch"></a>InTouch HMI Issues</h2>
+
+<TABLE style="TEXT-ALIGN: left" cellSpacing=2 cellPadding=5 border=1 width="1055">
+
+<TR>
+    <TD width="35" style="FONT-WEIGHT:bold; VERTICAL-ALIGN:top; TEXT-ALIGN:center">Original Change Request</TD>
+    <TD width="20" style="FONT-WEIGHT:bold; VERTICAL-ALIGN:top; TEXT-ALIGN:center">Related Change Requests</TD>
+    <TD width="885" style="FONT-WEIGHT:bold; VERTICAL-ALIGN:top; TEXT-ALIGN:center">Description</TD>
+</TR>
+<TBODY>
+  
+  <tr>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00137880</span></td>
+	<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold"></span></td>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">SR#103136129</span>: While navigating among different InTouch WindowViewer windows  containing ArchestrA Graphics, the "halos" indicating active, selected, or focused objects disappeared. This behavior occurred with the memory cache enabled.
+	</td>
+  </tr>
+  
+</tbody>
+</table>
+
+
+<h1><a name="Known_Issues"></a>Known Issues</h1>
+
+	<p>The following important known issues are listed by their assigned CR number in ascending order. Additional known issues are documented in the product-specific Readme files. </p>
+
+	<ul>
+		<li><a href="#Known_Issues_Installation">Installation and Uninstallation Issues</a></li>
+		<li><a href="#Known_Issues_Upgrade">Upgrade and Migration Issues</a></li>
+		<li><a href="#Known_Issues_ASB">ArchestrA Service Bus and Multi-Galaxy Communication Issues</a></li>
+		<li><a href="#Known_Issues_InTouch">InTouch HMI Issues</a></li>
+		<li><a href="#Known_Issues_EAC">ArchestrA Alarm Control Issues</a></li>
+	</ul>
+           
+<h2><a name="Known_Issues_Installation" id="Known_Issues_Installation"></a>Installation and Uninstallation Issues</h2>
+
+<table style="text-align: left;" border="0" cellpadding="5" cellspacing="1">
+<tbody>
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00101032</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1">If Wonderware Information Server was installed but was never configured, and you then attempt to uninstall any Wonderware System Platform product, the following error occurs: "The program can't start because ivfw.dll is missing from your computer. Try reinstalling the program to fix this problem." 
+		<p>To resolve this issue, configure Wonderware Information Server. You will then be able to uninstall the other products.</p></td>
+	</tr>
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00114588</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1">You must manually install the language packs for the Wonderware Historian Client product by running the setup.msi file in the appropriate subfolder of the following folder of the Wonderware System Platform DVD: ...\Wonderware System Platform\CD-HistorianClients\HistorianClient\Lang\.</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00114910</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1">On a computer running the Windows Server 2008 R2 or Windows 7 (64-bit) operating system, a blank domain is shown in <b>Admin User Page</b> when you clear the <b>Create Local Account</b> check box. This behavior is a result of the browser service being disabled by default on the computer running the Windows Server 2008 R2 or Windows 7 (64-bit) operating system. </td>
+	</tr>
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00116883</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1">Due to a Windows operating system issue, Wonderware InTouch HMI and related applications, such as Alarm DB Logger, can crash on startup if installed to a drive other than C:\. As a workaround, create an empty file named <b>win.ini</b> in folder <b>C:\Users\&lt;username&gt;\AppData\Local\Wonderware</b> where "username" is the name of the user attempting to start the application. </td>
+	</tr>
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00120356</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1">Creating a new graphic toolset, or creating a new symbol in an existing toolset, from the Graphic Toolbox in the IDE can result in errors in the logger if Wonderware Intelligence 1.5 is also installed. Creating a new symbol directly under the galaxy rather than from the Graphic Toolbox does not result in logger errors. Functionality is not impacted, and the logger errors can be ignored.</td>
+	</tr>					
+				
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00123209</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1">When installing Wonderware System Platform, the system cannot read the Wonderware Application Server license if the Galaxy Repository and the IDE are installed on a node where Wonderware InBatch or other Invensys products are already installed. As a workaround, use the License Manager to reinstall the ArchestrA license for Application Server after the Wonderware System Platform installation is complete.</td>
+	</tr>	
+				
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00128943</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1">While installing Wonderware System Platform, if the logged-on user (the installer) is not a SQL Server administrator, the <B>Config SQL</b> dialog box appears and requests SQL Server administrator credentials. If invalid credentials are entered multiple times before valid credentials are entered, the Application Server installation will fail, prompting for a CD location - even though the CD location is already available - and post-installation ArchestrA Service Bus configuration steps also will fail. As a workaround, uninstall any System Platform components already installed, then reinstall Wonderware System Platform. Enter correct SQL Server administrator credentials when requested.</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00130063</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1"><b>SR 103130498: </b>If the Wonderware.opt file has been deleted, the system will behave erratically. 
+		<p>To resolve this issue, re-install the Wonderware.opt file by executing the program repair option for License Manager or Application Server. You can launch repair from either from the Windows control panel or from the Wonderware System Platform installation DVD.</p></td>
+	</tr>
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00133121</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1"><b>SR 10417637</b>: Installing Wonderware Application Server 2014 Patch 01 with Struxureware Power Monitoring Expert version 7.2 results in a port conflict that can cause Application Server (ArchestrA IDE) to stop working. As a workaround, specify a different port for the aaGR service as follows:
+			<ol>
+				<li>Create a key with name "Remoting" if it doesn't exist under HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ArchestrA\Framework\ </li>
+				<li>Create a String value with name "defaultPort" under HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ArchestrA\Framework\Remoting.</li>
+				<li>Specify a port number, available on the local machine, other than 8090. For example, specify port 8091.</li> 
+				<li>Restart the aaGR service by entering the following at the command prompt: 
+					<ol type="a">
+						<li>net stop aagr</li> 
+						<li>net start aagr</li>
+					</ol></li>
+				<li>Start Application Server (ArchestrA IDE).</li>
+			</ol>
+		</td>
+	</tr>
+	
+	<tr>
+		<td style="text-align: left; vertical-align: top" colspan="2" rowspan="1"><span style="font-weight: bold;">L00138250</span>:</td>
+		<td style="text-align: left; vertical-align: top"  width="800px" colspan="2" rowspan="1">If Recipe Manager Plus 2014 R2 is installed on the same node where Wonderware System Platform 2014 R2 SP1 has been  installed, AND it is configured as "Integrated with Wonderware Application Server," then the ASB Services Configurator in the Application Server IDE does not display service definitions and instances. The message "Failed To Get Service Definitions" is displayed.
+		<p>Workaround: To fix this issue, use the Configurator tool. 
+		<ol>
+		<li>Under <strong>Recipe Manager Plus > Server components</strong>, select the mode "Standalone" and click <strong>Configure</strong>.</li>
+		<li>After completing this configuration, select the mode "Integrated with Wonderware Application Server" and configure it.</li>
+		<li>When mode configuration completes, go back to the ASB Services Configurator in the ArchestrA IDE and configure ASB services.</li>
+		</ol></td>
+	</tr>
+
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" colspan="2" rowspan="1"><span style="font-weight: bold;">L00139973</span>:</td>
+		<td style="text-align: left; vertical-align: top; width: 800px" colspan="2" rowspan="1">On a system with Wonderware Application Server, InTouch, and the Historian installed, deploying a Galaxy, uninstalling the Historian, then undeploying the Galaxy results in errors in the Logger and the Bootstrap service stopped and set to disabled. 
+		<p>Workaround: Repair Wonderware Application Server from Windows' Add/Remove Programs utility. </p></td>
+	</tr>
+
+</tbody>
+</table>
+   
+<h2><a name="Known_Issues_Upgrade"></a>Upgrade and Migration Issues</h2>
+
+<table style="text-align: left;" border="0" cellpadding="5" cellspacing="1">
+<tbody>
+	<tr>
+		<td style="text-align: left; vertical-align: top" rowspan="1"><span style="font-weight: bold;">L00133523</span>:</td>
+		<td style="text-align: left; vertical-align: top"  width="800px" rowspan="1">If you upgrade ArchestrA System Platform 2012, ArchestrA System Platform 2012 R2, and Wonderware System Platform 2014 to Wonderware System Platform 2014 R2 and if you navigate back from the dynamic pre-requisite screen (or further)  to the Wonderware Information Server readiness checkness screen, the <b>Next</b> button is not available in that screen and you cannot proceed with the upgrade.
+		
+		<p>This is due to the fact that by the time the <b>Back</b> navigation was initiated, the MS-SQL Server was already stopped by the upgrade process, resulting in a validation process failure. </p>
+		<p>Workaround: You must cancel the installation, restart the SQL Server and relaunch the install.</p></td>
+	</tr>
+	
+</tbody>
+</table>
+			
+<h2><a name="Known_Issues_ASB"></a>ArchestrA Service Bus and Multi-Galaxy Communication Issues</h2>
+
+<table style="text-align: left;" border="0" cellpadding="5" cellspacing="1">
+<tbody>				
+
+	<tr>
+		<td style="text-align: left; vertical-align: top" rowspan="1"><span style="font-weight: bold;">L00123462</span>:</td>
+		<td style="text-align: left; vertical-align: top" width="800px" colspan="2" rowspan="1">In a multi-galaxy environment, you can pair galaxies by IP address rather than using a node name (computer machine name). Unpairing galaxies identified by IP address fails when NetBIOS and DNS solutions are unavailable. Where your galaxies are identified by IP address, you must create a temporary host file to map the IP addresses as hostnames for purposes of unpairing. <br><br>
+		For example, Node1 and Node2 are identified by IP address and are paired. To unpair them, do the following:
+		<ol>
+			<li>Navigate to the Hosts file on <b>Node1</b>. In Windows 7 and Windows 2008 R2 operating systems, the Hosts file typically can be found at C:\Windows\System32\Drivers\Etc\.</li>
+			<li>Open the Hosts file in Notepad. In Windows 7 and Windows 2008 R2 systems, you should right click the Notepad executable, and click <b>Run as Administrator</b>, then open the Hosts file from inside Notepad. <br>
+			Alternatively, you can click <b>Start</b>, then click <b>Run</b>, then enter the following command in the text box:<br> 
+			<b>notepad c:\Windows\System32\Drivers\Etc\Hosts</b>. </li>
+			<li>Edit the Hosts file:
+				<ol type="a">
+				<li>Enter the IP address for <b>Node2</b>.</li>
+				<li>On the same line as the IP address, provide a node (computer) name.</li>
+				<li>Enter IP addresses and node (computer) names for each node identified by IP address to be unpaired. </li>
+				</ol>
+			</li>
+			<li>Save and close the Hosts file. You should now be able to unpair the galaxies.</li>
+		</ol>
+		</td>
+	</tr>	
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" rowspan="1"><span style="font-weight: bold;">L00123474</span>:</td>
+		<td style="text-align: left; vertical-align: top" width="800px" colspan="2" rowspan="1">Writing from InTouch to a remote galaxy using indirect tags can fail for some of the remote references. Object Viewers on two different nodes may show different values for the same reference. You can avoid this issue by deactivating Advanced Communication Management in the IDE. Additionally, if you use the same indirect tag with scripting more than one time, you can modify your scripts to set the indirect tag's name property to an empty string after the loop completes. For example, in the following script snippet, you would add the line highlighted with <b>bold text</b>:<br>
+		<blockquote>
+					<code>
+					IF bRunScript&#160;&#160;THEN<br><br>
+					&#160;&#160;&#160;&#160;FOR tagval = 1 TO 3<br>
+					&#160;&#160;&#160;&#160;&#160;&#160;indirect.Name = "Testtag" + Text(tagval, "0");<br>
+					&#160;&#160;&#160;&#160;<br>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IF indirect.Value &gt; 4&#160;&#160;THEN<br>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;indirect.Value&#160;&#160;= 0;<br>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ELSE <br>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;indirect.Value&#160;&#160;= indirect.Value&#160;&#160;+ 1;<br>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;indirect.Value&#160;&#160;= indirect.Value&#160;&#160;+ 1;<br>
+					&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ENDIF;&#160;&#160;&#160;&#160;&#160;&#160;<br>
+					&#160;&#160;&#160;&#160;NEXT;<br>
+					&#160;&#160;&#160;&#160;&#160;&#160;</code><b>indirect.Name = "";</b><code><br><br>
+					ENDIF;<br><br>
+					</code>
+		</blockquote>
+		</td>
+	</tr>				
+
+	<tr>
+		<td style="text-align: left; vertical-align: top;" rowspan="1"><span style="font-weight: bold;">L00123475</span>:</td>
+		<td style="text-align: left; vertical-align: top" width="800px" colspan="2" rowspan="1">When configuring user-configurable ArchestrA Services - ASBGRBrowsing service, ASBMxDataProvider service, and ASBAuthorization service - it is important not to assign the same port number to two instances of a service on the same node. However, it can occur that while creating instances of a service and assigning them to the same node, that the system can erroneously assign a duplicate port number by default. The main symptom of this error is that you do not see a remote galaxy where expected, such as in a list of available galaxies in the Galaxy Browser. As a first step in troubleshooting this problem, do the following:
+		<ol>
+			<li>Open the <b>Configure ArchestrA Services</b> utility.</li> 
+			<li>Note the port number of the ASBGRBrowsing service instance for the missing galaxy.</li>
+			<li>Compare this to the port numbers of other ASBGRBrowsing service instances assigned to the same node.</li>
+			<li>If you find a service instance with a duplicate port number on the same node:
+			<ol type="a">
+				<li>Undeploy the browsing service of the missing galaxy.</li>
+				<li>Change the port number to a unique number for that node.</li>
+				<li>Redploy the browsing service instance.</li>
+			</ol> </li>
+		</ol>
+		</td>
+	</tr>	
+
+	<tr>
+		<td style="vertical-align:top"><strong>L00125223</strong>:</td>
+		<td style="text-align: left; vertical-align: top" width="800px" colspan="2" rowspan="1">If you create galaxies on separate nodes, with Wonderware System Platform 2014 (or later) IDE installed on one node and Wonderware System Platform 2012 R2 IDE installed on a second node, then pair them for multi-galaxy communication, you will be able to browse galaxy attributes from the 2014 (or later) IDE to the 2012 R2 IDE, but not from the 2012 R2 IDE to the 2014 (or later) IDE. Installing Wonderware System Platform 2012 R2 Patch 01 on the second node resolves the issue. </td>
+
+	
+	<tr>
+        <td style="text-align: left; vertical-align: top;" rowspan="1"><span style="font-weight: bold;">L00133534</span>:</td>
+        <td style="text-align: left; vertical-align: top; width: 800px" rowspan="1">Undeploying a galaxy with Object Viewer active will cause Object Viewer to shut down with an informational message that requires acknowledgement (click <b>OK</b>) to complete the shutdown. In a multi-galaxy configuration, with Object Viewer open, undeploying a paired Galaxy, then redeploying the galaxy without properly shutting down Object Viewer, can cause ASB services to fail to reconnect to the redeployed galaxy. To avoid this condition, click <b>OK</b> to shut down Object Viewer before redeploying the galaxy. </td>
+    </tr>	
+	
+	<tr>
+        <td style="text-align: left; vertical-align: top;" rowspan="1"><span style="font-weight: bold;">L00139918</span>:</td>
+        <td style="text-align: left; vertical-align: top; width: 800px" rowspan="1">Uninstalling Wonderware InBatch versions 10.2 or 11.0 installed on a  Wonderware System Platform 2014R2 SP1 system results in a failure to connect to ArchestrA Service Bus (ASB) services. If you uninstall either of these InBatch versions then cannot connect to ASB services, run a repair on Wonderware System Platform 2014R2 SP1 using Windows' Add/Remove Programs utility.</td>
+    </tr>	
+	
+</tbody>
+</table>			
+			
+<h2><a name="Known_Issues_InTouch"></a>InTouch HMI Issues</h2>
+			
+	<p>The following known issues are in addition to those documented in the InTouch HMI Readme.</p>
+	
+<table style="text-align: left;" border="0" cellpadding="5" cellspacing="1">
+<tbody>				
+
+	<tr>
+		<tr>
+		<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139557</span>:</td>
+		<td>When using a non-default SQL port: In Runtime with multiple EACs configured, database connections may fail with a "Timeout expired" warning (see full text below) appearing in the SMC.<br><br>
+		
+		<b>Error Message:</b> Open() in DCMConnection failed: 'Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.'<br><br>
+		
+		<b>Workaround:</b> Perform a manual refresh on the EAC control to re-establish the connection.
+
+</td>
+	</tr>
+	<tr>
+		<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139560</span>:</td>
+		<td>When using a non-default SQL port: If the primary Historian server is down during a restart of WindowViewer, trend updates are delayed by approximately 25 seconds. This is a one-time delay after WindowViewer restarts.</td>
+	</tr>
+
+  	<tr>
+		<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139681</span>:</td>
+		<td>After changing the SQL port of the Historian node and restarting Historian, the ArchestrA Trend Client (RT Trend) does not reconnect to Historian.<br><br>
+		
+		<b>Workaround:</b> Restart the instance of WindowViewer hosting the Trend client.</td>
+		</tr>
+
+  	<tr>
+		<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139786</span>:</td>
+		<td>After switching between default and custom SQL ports for Dual Historian, on a machine where the ArchestrA Trend Client (RT Trend) is used and is configured by scripting, only the real time trend displays, not the Historian trend.<br><br>
+		
+		<b>Workaround:</b> Delete the <b>servers.xml</b> file typically found at the following location: 
+		<code>C:\Users\&lt;<i>user-name</i>&gt;\AppData\Local\Wonderware\ActiveFactory\servers.xml.</code>
+		</td>
+	</tr>
+
+ 	<tr>
+		<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139789</span>:</td>
+		<td>Connecting to a SQL database in Microsoft Windows 8 or Windows 10 operating systems, when a non-default port is configured for SQL, results in an error message that a connection to the server is not available. 
+
+<br><br>
+		
+		<b>Workaround:</b> Disable (shut down) the firewall on Windows 8 and Windows 10 operating system machines. 
+		</td>
+	</tr>
+
+  	<tr>
+		<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139813</span>:</td>
+		<td>Deploying an InTouchViewApp with a fully qualified file name exceeding 260 characters results in errors logged in the Logger and client controls not copied to the destination location. A fully qualified file name is one that prefixes the file name with the drive letter and directory path. The fully qualified file name must not exceed 260 characters, and the directory name must not exceed 248 characters. These are Windows operating system limitations.  
+		</td>
+	</tr>
+	
+  	<tr>
+		<td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold">L00139833</span>:</td>
+		<td>Migrating a Galaxy which has an InTouchViewApp with embedded Historian Client controls from Wonderware System Platform versions 2012R2 or 2014R2 to version 2014R2 Service Pack 1, results in errors logged in the Logger.  <br><br>
+		
+		<b>Workaround:</b> Before migrating the InTouch application, delete the previous version Historian Client controls that exist in the Galaxy. Import the newer version controls. 
+		</td>
+	</tr>
+
+
+</tbody>
+</table>	
+	
+<h2><a name="Known_Issues_EAC"></a>ArchestrA Alarm Control Issues</h2>
+			
+	<p>If you create a filter for a history block query that results in no matches, "Not Connected" appears in the status bar and a warning is logged to the ArchestrA Logger. The status bar should show "Connected" even though no matches are returned.</p>
+
+<h1><a name="Documentation"></a>Documentation</h1>
+
+	<p>The Wonderware System Platform documentation is available Adobe Acrobat .pdf files that are available from the following locations on the Wonderware System Platform DVD:</p>
+
+    <blockquote>
+    <p>\Wonderware System Platform\CD-ApplicationServer\UserDocs\English</p>
+    <p>\Wonderware System Platform\CD-Historian-x64\UserDocs\English</p>
+    <p>\Wonderware System Platform\CD-HistorianClients\HistorianClient\Docs</p>
+    <p>\Wonderware System Platform\CD-Intouch\UserDocs\English</p>
+    <p> \Wonderware System Platform\CD-WIS\UserDocs\English</p>
+    </blockquote>
+
+    <p>To view the documentation, you must first download the latest version of Adobe Reader from the Adobe Corporation web site: <a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank">http://www.adobe.com/products/acrobat/readstep2.html</a>.</p>
+
+	<p>You can also access online Help systems from within the software.</p> 
+
+	<ul>
+		<li><a href="#Doc_Info_Common">Common Components and Utilities User Documentation</a></li>
+		<li><a href="#Doc_Info_InTouch">Wonderware InTouch HMI</a></li>
+		<li><a href="#Doc_Info_App_Server">Wonderware Application Server</a></li>
+		<li><a href="#Doc_Info_Historian_Server">Wonderware Historian Server</a></li>
+		<li><a href="#Doc_Info_Historian_Client">Wonderware Historian Client</a></li>
+		<li><a href="#Doc_Info_Info_Server">Wonderware Information Server</a></li>
+		<!-- <li><a href="#Documentation Issues">Documentation Issues</a></li> -->
+	</ul>
+
+<h3><a name="Doc_Info_Common"></a>Common Components and Utilities User Documentation</h3>
+
+	<ul>
+		<li><i>Wonderware System Platform Installation Guide.</i> This guide provides information on installing the Wonderware System Platform, including hardware and software requirements and migration instructions. </li>
+		<li><span style="FONT-STYLE: italic">Log Viewer User's Guide</span>. Explains how to use the Log Viewer utility to determine system diagnostics. </li>
+		<li><span style="FONT-STYLE: italic">Log Flag Editor Utility Guide</span>. Explains how to turn on and off certain diagnostics logging messages. </li>
+		<li><span style="FONT-STYLE: italic">Invensys License Manager Guide</span>. Explains how to install and manage product licenses. </li>
+		<li><span style="FONT-STYLE: italic">Wonderware ArchestrA Protocol Guide</span>. Explains background information on the main protocols used between components of Wonderware products.</li>
+    </ul>
+
+<h3><a name="Doc_Info_InTouch"></a>Wonderware InTouch HMI 2014 R2 SP1 Documentation</h3>
+
+	<ul style="LIST-STYLE-TYPE: disc">
+		<li><span style="FONT-STYLE: italic">InTouch HMI Concepts and Capabilities Guide</span>. Describes all of the features and main concepts in the InTouch HMI without going too deep into the technical and procedural details.</li>  
+            
+		<li><span style="FONT-STYLE: italic">InTouch Modern Application Guide</span>. Describes the tasks to manage Modern applications from Application Manager and configure Modern applications from WindowMaker.</li>
+			
+		<li><span style="FONT-STYLE: italic">The InTouch HMI Application Management and Extension Guide</span>. Describes how to create and manage InTouch applications locally and in a network environment.</li>  
+            
+		<li><span style="FONT-STYLE: italic">InTouch HMI Data Management Guide</span>. Describes how to work with data items in the InTouch HMI and connect your application to the physical devices in your plant environment.</li>  
+            
+		<li><span style="FONT-STYLE: italic">InTouch HMI Visualization Guide</span>. Describes how to develop the graphical operator interface of an InTouch application.</li>  
+            
+		<li><span style="FONT-STYLE: italic">InTouch HMI SmartSymbols Guide</span>. Describes how to create reusable templates for graphic symbols that can save you a lot of engineering time and effort.</li>  
+            
+		<li><span style="FONT-STYLE: italic">InTouch HMI and ArchestrA Integration Guide</span>. Describes how to integrate the InTouch HMI and ArchestrA technology to develop more robust applications that use richer graphics.</li> 
+
+		<li><span style="FONT-STYLE: italic">InTouch HMI Alarms and Events Guide</span>. Describes how to configure alarms for your data items, how to view and acknowledge alarms, and how to use the alarm clients and utilities supplied with the InTouch HMI. </li>  			
+            
+		<li><span style="FONT-STYLE: italic">InTouch HMI Scripting and Logic Guide</span>. Describes how to write scripts in the InTouch HMI to automate common tasks and processes. This guide includes a reference of the InTouch scripting language and functions. </li>  
+            
+		<li><span style="FONT-STYLE: italic">InTouch HMI Supplementary Components Guide</span>. Describes software components that you can optionally install and use with the InTouch HMI. </li>  
+	</ul>
+		  
+<h3><a name="Doc_Info_App_Server"></a>Wonderware Application Server 2014 R2 SP1 Documentation</h3>
+
+	<ul style="LIST-STYLE-TYPE: disc">
+		<li><span style="FONT-STYLE: italic">Wonderware Application Server User's Guide</span>. Explains configuring and deploying Wonderware Application Server applications. </li>
+		<li><span style="FONT-STYLE: italic">Creating and Managing ArchestrA Graphics User's Guide</span>. Explains how you create and manage graphical symbols using the ArchestrA Symbol Editor within the Integrated Development Environment (IDE). </li>
+		<li><span style="FONT-STYLE: italic">Wonderware Application Server Scripting Guide</span>. Reference for the scripting language in Wonderware Application Server. </li>
+		<li><span style="FONT-STYLE: italic">Object Viewer User's Guide</span>. Explains how to acquire run-time data using the Object Viewer. </li>
+		<li><i>Guide to the ArchestrA Alarm Control</i>. Explains how to configure the alarm control  (client) to show current and historical alarms and events in a grid. </li>
+		<li><i>Guide to the ArchestrA Trend Client</i>. Explains how to configure a chart to trend real-time data values. </li>
+		<li><span style="FONT-STYLE: italic">Platform Manager User's Guide</span>. Explains how to start and stop system components. </li>
+		<li><span style="FONT-STYLE: italic">Galaxy Database Manager User's Guide</span>. Explains how to backup and restore the Galaxy database. </li>
+
+		<li><span style="FONT-STYLE: italic">Wonderware InTouch HMI and ArchestrA Integration Guide</span>. Explains how you can use the ArchestrA Integrated Development Environment (IDE) to manage InTouch HMI applications so that you can use symbols you create in the ArchestrA Symbol Editor.</li>
+    </ul>
+
+<h3><a name="Doc_Info_Historian_Server"></a>Wonderware Historian Server 2014 R2 SP1 Documentation</h3>
+
+	<ul>
+		<li><i>Wonderware Historian Concepts Guide.</i> Provides an overview of the entire Wonderware Historian system and describes each of the subsystems in detail. </li>
+		<li><i>Wonderware Historian Administration Guide.</i> Describes how to administer and maintain an installed Wonderware Historian, such as, configuring data acquisition and storage, managing security, configuring replication, and monitoring the system. </li>
+		<li><i>Wonderware Historian Database Reference.</i> Provides documentation for all of the Wonderware Historian database entities, such as, tables, views, and stored procedures. </li>
+		<li><i>Wonderware Historian Glossary.</i> Provides definitions for terms used throughout the documentation. </li>
+	</ul>
+
+<h3><a name="Doc_Info_Historian_Client"></a>Wonderware Historian Client 2014 R2 SP1 Documentation</h3>
+
+	<ul>
+		<li><i>Wonderware Historian Client Software User's Guide</i> Describes how to use stand-alone applications, Microsoft Office add-ins, and ActiveX and .NET controls to retrieve and display data. </li>
+	</ul>
+
+<h3><a name="Doc_Info_Info_Server"></a>Wonderware Information Server 2014 R2 Documentation</h3>
+
+	<ul>
+		<li><i>Wonderware Information Server Administration Guide.</i> Describes how to administer and maintain a Wonderware Information Server, including configuring data sources, managing security, and performing customizations.</li>
+		<li><i>Wonderware Information Server Win-XML Exporter Guide.</i> Describes how to use the Win-XML Exporter to convert InTouch HMI application windows to web pages and publish them to the Wonderware Information Server. This guide also includes a section for designing InTouch HMI application windows for Wonderware Information Server. This section describes how to best design InTouch HMI windows so that they can be successfully converted and optimally viewed in the portal. </li>
+		<li><i>ArchestrA Web Exporter Guide</i>. Describes how to use the ArchestrA Web Exporter to publish ArchestrA Symbols and InTouch HMI Windows to Wonderware Information Server. This guide also describes how to add, delete and modify WindowSets and SymbolWeaverSets of the project and preview them in the preview window of ArchestrA Web Exporter. </li>
+		<li><i>ActiveFactory for Wonderware Information Server Help</i>. Describes how to use the ActiveFactory for Wonderware Information Server web portal  to view a variety of reports that include data from Wonderware Historians. </li>
+		<li><i>ArchestrA License Manager Guide</i>. Describes the ArchestrA License Manager and how to use it to install and manage licenses and license servers on local and remote computers. </li>
+	</ul>
+
+<!--
+<h2><a name="Documentation Issues"></a>Documentation Issues </h2>
+<p>The following table lists important Wonderware System Platform documentation corrections. For documentation corrections for individual System Platform products, see the individual product Readme files. </p> 
+<p></p>
+
+<table style="TEXT-ALIGN: left; WIDTH: 900px" border="1" cellspacing="2" cellpadding="2">
+<tbody>
+ 
+	<tr>
+		<td style="TEXT-ALIGN: center; VERTICAL-ALIGN: top; FONT-WEIGHT: bold" "width:5%;">Item</td>
+		<td style="TEXT-ALIGN: center; VERTICAL-ALIGN: top; FONT-WEIGHT: bold" "width:20%;">Location of Change</td>
+		<td style="TEXT-ALIGN: center; VERTICAL-ALIGN: top; FONT-WEIGHT: bold" "width:35%;">Existing Documentation</td>
+		<td style="TEXT-ALIGN: center; VERTICAL-ALIGN: top; FONT-WEIGHT: bold" "width:40%;">Change</td>
+	</tr>
+</tbody>
+</table>
+-->
+<H1 class=center><a name="ITAA_readme"></a>Wonderware InTouch Access Anywhere Version 11.1.100 Readme</H1>
+
+
+<p>Last revision: 1/12/2016</p>
+
+<h2>About This Readme</h2>
+<p>This Readme provides information about Wonderware InTouch Access Anywhere version 11.1.100.
+</p> 
+
+<P><A href="#ITAA_Introduction">InTouch Access Anywhere Overview</A>
+<P><A href="#ITAA_NewFeatures">New Features of InTouch Access Anywhere Version 11.1.100</A> 
+<P><A href="#ITAA_System_Requirements">Requirements, Browsers, and Mobile Devices</A>
+<!--<P><A href="#Product_Compatibility">Component Compatibility</A>-->
+<P><A href="#ITAA_Installation">Wonderware InTouch Access Anywhere Installation</A>
+<P><A href="#RI-ITAA">Resolved Issues</A>
+<P><A href="#KI-ITAA">Known Issues and Behaviors</A> 
+<blockquote>
+<!--<p><A href="#Android">Android</a></p>-->
+<!--<p><A href="#iOS">iOS</a></p>-->
+<p><A href="#ITAA_WinRT">Windows RT</a></p>
+<!-- <p><A href="#ITAA_Win7">Windows 7 and Windows Server 2008 R2</a></p> -->
+<p><A href="#ITAA_combo">Browser and Operating System Combinations</a></p>
+<p><A href="#ITAA_all">All Operating Systems</a></p>
+</blockquote>
+<P><A href="#ITAA_Documentation">InTouch Access Anywhere Documentation</A> 
+<P></P>
+<P>
+
+
+<A name="ITAA_Introduction"></A>
+<H1>Wonderware InTouch Access Anywhere Overview</H1><p class="blue">
+<p>InTouch Access Anywhere provides remote access to Wonderware InTouch applications with an HTML5 Web browser running on a desktop computer or a mobile device. Any Web browser that supports HTML5 can be used as the client to view InTouch applications running on a remote desktop server. Wonderware InTouch Access Anywhere enables you to select an InTouch application from a list and view it running in WindowViewer.
+</p>
+<p>
+The InTouch Access Anywhere installation media provides the following:
+</p>
+ <ul>
+ <li><b>InTouch Access Anywhere Server</b>: Enables you to view remote Wonderware InTouch applications hosted on Terminal Servers with an HTML5-compliant web browser running on mobile devices or a desktop.</li>
+  <li><b>InTouch Access Anywhere Secure Gateway</b>: Optional server that provides remote, secure connections from clients running on unsecured networks to internal network resources. The Secure Gateway provides authentication and authorization services as well as data encryption.</li>
+  </ul>
+<H1><A name="ITAA_NewFeatures"></A>New Features of InTouch Access Anywhere Version 11.1.100</H1>
+<ul>
+<li>"Fit to browser" and 'Fit to screen (Full Screen)"' resolution choices.</li>
+<li>Start page Multilanguage support (English, German French S-Chinese and Japanese). </li>
+<li>Ability to hide specific InTouch applications from InTouch Access Anywhere.</li>
+<li>Enhanced performance. 64 bit support, improvements in animation performance and lower audio bandwidth use. </li>
+<li>Automatic reconnect upon recovery</li>
+<li>Time Zone redirection</li>
+<li>TouchPad Mouse functionality</li>
+<li>Graphical gesture help for touch screen devices </li>
+<li>New session Toolbar</li>
+<li>ESC and Tab keys from the Toolbar</li>
+<li>Clipboard feature on the toolbar for desktop computers</li>
+<li>Keyboard auto-sense for touch screen devices</li>
+</ul>
+
+
+<A name="ITAA_System_Requirements"></A>
+<H1></A>Requirements, Browsers, and Mobile Devices</H1>
+<p>This section summarizes InTouch Access Anywhere installation requirements, supported browsers, and considerations for viewing InTouch applications on mobile devices. For more detailed information, see the <a href="#ITAA_Documentation">Wonderware InTouch Access Anywhere documentation.</a> </p>
+<H2>Installation Requirements</h2>
+
+<p>The following list describes the prerequisites to install the InTouch Access Anywhere Server or Secure Gateway.</p>
+ 
+ <ul>
+	<li>The computer that will host the Wonderware InTouch Access Anywhere Server must be running a 64-bit version of Windows Server supported by InTouch 10.6 or later. <b>Note:</b> Embedded operating systems are not supported by InTouch Access Anywhere Server.</li>
+	<li>The computer that will host the Secure Gateway must be running Windows 2003 or newer.</li>
+	<li>Wonderware InTouch Access Anywhere server must be installed on the same RDP Server computer as Wonderware InTouch HMI.</li>
+	<li>The Wonderware InTouch Access Anywhere server and Secure Gateway must be installed on separate computers.</li>
+	<li>Remote Desktop Services (RDS) must be enabled and properly configured. For detailed instructions, refer to the InTouch Access Anywhere Server Administrator Manual.</li>
+	<li>You must have an InTouch 2012 R2 TSE or InTouch 2014 R2 TSE Concurrent License installed on the same computer as your Wonderware InTouch and InTouch Access Anywhere Server installations.</li>
+	<li>Per-Device licenses are not supported.</li>
+ </ul>
+</p>
+<h3><font color="red">Important Security Requirement:</font> Securely Deploying InTouch Access Anywhere</h3>
+<p>Direct access to the InTouch Access Anywhere Secure Gateway over the Internet is not supported. We recommend that you access the Gateway via a VPN tunnel for all remote connections.</p>
+
+<H2><a name="ITAA_Browsers">Browsers</a></h2>
+<p>Wonderware InTouch Access Anywhere can be accessed from smart phones, tablets, and laptop computers that provide an HTML5-compliant web browser. Browsers verified to work with Wonderware InTouch Access Anywhere include the following:</p>
+
+<h3><a name="ITAA_BrowsersTested"></a>Browsers Tested with InTouch Access Anywhere</h3>
+ <ul>
+		<li>Microsoft Edge</li>
+		<li>Microsoft Internet Explorer 11</li>
+		<li>Firefox version 40</li>
+        <li>Safari version 8</li>
+        <li>Chrome version 44</li>
+        <li>Opera version 31</li>
+ </ul>
+<h3><a name="ITAA_BrowsersCompatible"></a>Functionally Compatible Browsers</h3>
+ <p>Certain versions of the above listed browsers, such as</p>
+ <ul>
+		<li>Microsoft Internet Explorer 9 if connected through Secure Gateway</li>
+		<li>Microsoft Internet Explorer 10</li>
+		<li>Firefox versions 6 and higher</li>
+		<li>Safari versions 5 and higher</li>
+        <li>Chrome versions 12 and higher</li>
+        <li>Opera versions 11 and higher</li>
+ </ul>
+<p>are in theory functionally compatible with InTouch Access Anywhere. While you may be able to use them, specific behaviors are unknown as these browser versions have not been tested.</p>
+<p class="note"><b>BROWSERS - IMPORTANT NOTES:</b> <br><br>
+Although Wonderware InTouch Access Anywhere supports the listed browsers, you should review the <A href="#KI-ITAA"><b>Known Issues and Behaviors</b></a> section of this Readme for issues specific to each browser. <br><br>For further information about configuring and using Internet Explorer versions 7, 8, and 9, please contact Wonderware Technical Support.</p>
+
+<h2>Mobile Devices</h2>
+<p>Run-time interactions with InTouch applications are different on mobile devices than on traditional desktop computers. For example: </p>
+	<ul>
+		<li>Touch gestures perform some of the tasks that a mouse would do on a desktop or laptop, but not all mouse events have an equivalent touch gesture.
+		<li>Many mobile devices have built-in software keyboards instead of physical keyboards, which do not have keys such as <b>F1-F12</b>, <b>CTRL</b>, and <b>ALT</b>. </li>
+	</ul>
+<p>When using InTouch Access Anywhere to remotely view and interact with your applications, it is important to be aware of the behavior differences among devices, operating systems, and browsers. For the best user experience, you should become familiar with the touch interfaces in the devices you will use, and factor these differences into the design of your InTouch applications. For example:</p> 
+	<ul>
+		<li>Input animations do not need to invoke the InTouch or Windows operating system keyboards as mobile devices typically have their own.</li>
+		<li>Existing InTouch applications that make use of mouse events and keys or key combinations without a supported equivalent in a touch environment may require you to modify your application to use alternate supported methods. </li>
+	</ul>
+
+
+<h1><A name="ITAA_Installation"></A>
+Installing Wonderware InTouch Access Anywhere</h1>
+<p>Use the following procedures to install Wonderware InTouch Access Anywhere. </p>
+<ul>
+<li><a title="Click this link to view the information." href="#Server_Node">Installing Wonderware InTouch Access Anywhere Server</a>
+<li><a title="Click this link to view the information." href="#Secure_Gateway">Installing Wonderware InTouch Access Anywhere Secure Gateway</a>
+</ul>
+
+<h2><a name="Server_Node"></a>Installing Wonderware InTouch Access Anywhere Server </h2>
+<p><b>Note:</b> If you are upgrading to a newer version of InTouch Access Anywhere Server, take the following steps first:
+<ol>
+<li>Back up any customizations to your InTouch Access Anywhere Server installation.</li>
+<li>Uninstall InTouch Access Anywhere Server from the <b>Programs and Features</b> section of the Windows <b>Control Panel.</b></li>
+<li>Install InTouch Access Anywhere Server as described below.</li>
+</ol>
+<p>To install Wonderware InTouch Access Anywhere Server:</p>
+<ol>
+ <li>Run <b>setup.exe</b> from the root folder of the Wonderware InTouch Access Anywhere installation media.</li>
+ <li>After briefly displaying a splash screen, the options selection window appears. Select <b>InTouch Access Anywhere Server</b>, and click <b>Next</b>.</li>
+ <li>Click <b>Next</b> to accept the default installation settings, or select the <b>Customize Installation</b> option to change the installation destination, and then:
+ <ol>
+   <li>Click <b>Next</b>.</li>
+   <li>Click the <b>Browse</b> button to provide an installation path.</li>
+   <li>Click <b>Next</b>.</li>
+ </ol>
+ <li>Accept the license agreement by selecting the <b>I have read and accept the terms of the license agreement(s)</b> option, and then clicking <b>Agree</b>.</li>
+ <li>The <b>Ready to Install the Application</b> screen appears. Review the installation details and click <b>Install</b>.</li>
+ <li>Click <b>Finish</b> after the installer indicates that the <b>Installation has completed successfully</b>.</li>
+</ol>
+
+
+ <h2><a name="Secure_Gateway"></a>Installing the Wonderware InTouch Access Anywhere Secure Gateway</h2>
+<p>Refer to the InTouch Access Anywhere Secure Gateway Admin Manual for detailed instructions on installing InTouch Access Anywhere Secure Gateway.</p>
+ 
+<p class="note"><b>SECURE GATEWAY - IMPORTANT NOTES:</b> <br><br>
+You cannot install the InTouch Access Anywhere Secure Gateway on the same computer as InTouch or the InTouch Access Anywhere Server.<br><br>
+The InTouch Access Anywhere Secure Gateway does not provide two factor authentication. This can be a security concern when you directly access the InTouch Access Anywhere server through the Internet. InTouch Access Anywhere Secure Gateway security is not designed to be directly connected to the internet. As a workaround, you can use a VPN as the first level of authentication when accessing the InTouch Access Anywhere server through the Secure Gateway.<br><br>
+To access InTouch applications beyond a firewall you must install the Secure Gateway on a separate computer located in a DMZ.<br><br>
+After installing the Wonderware InTouch Access Anywhere Secure Gateway, your InTouch applications will not be available in the <b>Application Name:</b> list box when running InTouch Access Anywhere through the gateway. To access a list of your applications, see the Secure Gateway post-installation instructions in the <i>InTouch Access Anywhere Secure Gateway Administrator's Guide</i>.
+
+<h1><A name="RI-ITAA"></A>Resolved Issues</H1>
+<p>This section lists defects resolved with this release.</p>
+<P class=blue>
+<TABLE style="TEXT-ALIGN: left"; cellSpacing=2 cellPadding=2 border=1>
+	<col width="100">
+	<col width="1100">
+	<tr>
+	  <th>Defect <br>Number</th>
+	  <th>Description</th>
+	</tr>
+  <TBODY>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218571</span></td>
+    <td>[iOS: Safari, Chrome] No prompt is given when connected and trying to leave the page.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218574</span></td>
+    <td>[iOS: Opera Mini] [Documentation] Opera on iOS is unable to reach the Access Anywhere web server.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218941</span></td>
+    <td>[Win RT Specific] ZoomIn/ZoomOut are not supported on Win RT machine.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218942</span></td>
+    <td>[iOS: Safari, Chrome] [Win RT Specific] Unable to open context menu Through Touch.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218947</span></td>
+    <td>[Win RT Specific] The pop Dialog window looks blurred after dragging the Dialog across the screen.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218957</span></td>
+    <td>[All Browsers] In the "Alarm DB Viewer Control" Up and down arrow keys blacken on selection.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218962</span></td>
+    <td>[All Browsers] Freeze action in the "Alarm Viewer Control" is showing up a black icon "Display Frozen" cell below the table.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218970</span></td>
+    <td>[iOS: Safari, Android: Opera] Key scripts involving CTRL, ALT combinations don't work (doesn't work with bluetooth keyboard).
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218972</span></td>
+    <td>[All Browsers] No notification is provided to the user when the connection (network) between InTouch application in the browser and InTouch Access anywhere is lost.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218973</span></td>
+    <td>[All Browsers] Overall sluggish mouse response.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218985</span></td>
+    <td>[Android Specific] Drag/Move of pop up windows across the screen is very difficult.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218987</span></td>
+    <td>[All Browsers] [Documentation] Without keyboard, soft keyboard doesn't come up and iPad bluetooth keyboard doesn't help.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218988</span></td>
+    <td>[Safari] Intermittent: User Input animation does not bring up the Intouch keyboard.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS218991</span></td>
+    <td>[Android-Opera] Scroll bar cannot be scrolled by using the scroll bar.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS219341</span></td>
+    <td>[iOS: Safari, Android: Opera] Windows Keyboard does not work.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS219342</span></td>
+    <td>[iPad-Safari] Resize Keyboard, alphabetical, does not work on iPad Safari.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220378</span></td>
+    <td>[Win RT] Intermittent: Initial Data Subscription is not happening until User touches the screen.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220379</span></td>
+    <td>[Android-Chrome] The address bar blocks Viewer title bar and menu bar.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220382</span></td>
+    <td>[Win RT Specific] Window Viewer (Session) is hanging after Delta Deploy.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220390</span></td>
+    <td>[Win RT Specific] Short cut keys with Shift+"--" and Alaphabet are not working.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220391</span></td>
+    <td>[All browsers] 2 Modal dialogs will pop up, if Development menu item is clicked. Viewer focus will be blocked and cannot be closed.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220393</span></td>
+    <td>[Win RT Specific] Window viewer is hanging after unlocking the Tablet on which Host is running.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220398</span></td>
+    <td>[iOS: Safari, Android: Opera] iPad and Galaxy Note 8 software keyboard does not support F1~F12, Ctrl, and Alt keys.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220412</span></td>
+    <td>[iOS: Safari, Android: Opera, Firefox, Chrome]: Ctrl-Shift does not work for Key Script on iPad and Android while using bluetooth keyboard. Also, Ctrl does not work on iPad.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220413</span></td>
+    <td>[iOS: Safari, Android: Opera, Firefox, Chrome]:] The InTouch software keyboard shows in the screen center all the time. On a high resolution IT app, user needs to scroll a lot on the tablet to find the software keyboard.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220414</span></td>
+    <td>[Android: Opera, Firefox, Chrome]: aaSymbol Tooltips animation does not work.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220415</span></td>
+    <td>[iOS: Safari, Android: Opera, Firefox, Chrome]: aaSymbol Slider animation cannot be moved smoothly.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220418</span></td>
+    <td>[All Browsers, except RT IE10] Certain mouse events don't work. The ones that don' t work include "while left key down", "on right key down", "while right key down" and "on right key double click". Also, On right up should not work but works.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220420</span></td>
+    <td>[iPad: Safari, Android-Opera]: Slider from symbol lib does not work.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS220486</span></td>
+    <td>[iPad: Safari, Chrome, Android: Opera] ITAA Keyboard icon blocks the Viewer menu bar.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221083</span></td>
+    <td>[All Environments]TSE scripts are returning the name of Ericom Access server in place of TSE server.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221170</span></td>
+    <td>[Android - Firefox] IT window opened directly from Window to Showdialog after selecting window without clicking OK button.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221177</span></td>
+    <td>[All browsers] Maker will be started while clicking Development! from Viewer menu.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221178</span></td>
+    <td>[All Browsers] NAD functionality is not working.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221179</span></td>
+    <td>[All Browsers]When a user opts not to launch the I/O Servers when prompted during the launching of Window Viewer, the TSE session logs off the session.ying to leave the page.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221647</span></td>
+    <td>[Android Firefox] Bluetooth keyboard sends 2 characters when 1 key is pressed.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221668</span></td>
+    <td>Users are prompted with information related to an "untrusted security certificate" when connecting to the Secure Gateway.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221669</span></td>
+    <td>The Actions Scripts triggered by the mouse center button are not working on tablets. Issue happens on all supported browsers on all tablets (iPad, Android (Samsung Galaxy 8.0 & Windows RT (Surface)).
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221670</span></td>
+    <td>The DRC in ITAA is only applicable when the same user connects to server using regular RDP and enable DRC settings from IT App Manager.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS221762</span></td>
+    <td>On dialogs that have multiple text boxes, the "Next/Previous" buttons on the iPad are not enabled for the user to move to the next/previous text box.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS222597</span></td>
+    <td>Trying to connect after clicking "Reset" on landing page fails.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS222599</span></td>
+    <td>[Safari on IPAD, Android, Chrome on Desktop]Fast Typing of numbers on the numeric pop up pad is showing wrong values in the display.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS223125</span></td>
+    <td>[Desktop-IE10]:On providing Input through InTouch Keyboard on Server and hovering mouse on the outbound rectangle, a paint issue is seen.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS223128</span></td>
+    <td>[Desktop-IE10]:Unable to launch UserInput on selecting Windows Keyboard.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS229998</span></td>
+    <td>Short Cut (Ctrl+Shift+Esc) to open the task manager is working for ITAA Browser session.
+	</td>
+</tr>
+  
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS229999</span></td>
+    <td>[Specific to Android Samsung] Text Elements look blurred when the memory consumption in Android version is more.
+	</td>
+</tr>
+
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">TFS230621</span></td>
+    <td>[Safari Browser Specific] Private browsing must be turned off for the Safari browser when accessing InTouch Access Anywhere server.
+	</td>
+</tr>
+
+<!--removed as investigation CR
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">L00138098</span></td>
+    <td>SR49010045: Data consumption when connected to InTouch Access Anywhere was higher than a connection made via Remote Desktop Protocol, resulting in reaching the limit of a tablet's data card.
+	</td>
+</tr>
+-->
+
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">L00137284</span></td>
+    <td>SR103133750: The "Number of sessions" incorrectly displayed 0 when a user was connected.
+	</td>
+</tr>
+
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">L00136906</span></td>
+    <td>SR48710104: The mouse cursor was disappearing intermittently.
+	</td>
+</tr>
+
+<tr>
+    <td align=center><span style="FONT-WEIGHT: bold">L00136671</span></td>
+    <td>SR50310321: Input of several characters via Firefox (minus, plus, number sign and mutated vowels) was not possible when using German as an input language.
+	</td>
+</tr>
+</TBODY>
+</TABLE>
+
+
+
+
+<h1><A name="KI-ITAA"></A>Known Issues and Behaviors</H1>
+<P>This section describes known issues and platform/browser-specific behaviors in Wonderware InTouch Access Anywhere. The issues are grouped by operating systems. Workarounds are provided when available. You can also refer to the InTouch Access Anywhere user documentation for more information.</P>
+<P class=blue>
+<TABLE style="TEXT-ALIGN: left"; cellSpacing=2 cellPadding=2 border=1>
+	<col width="250">
+	<col width="1000">
+	<tr>
+	<th>Operating Systems</th>
+	<th>Issues and Behaviors</th>
+	</tr>
+  <TBODY>
+  
+
+
+  <tr>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold"><a name="ITAA_WinRT"></a>Windows RT</span></td>
+    <td><b>Internet Explorer 10 on WinRT in a touch environment:</b> A mouse cursor may disappear after using the Surface keyboard to enter data. As a workaround, use touch gestures in place of mouse inputs. TFS218943.
+	</td>
+  </tr>
+  <!--
+  <tr>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold"><a name="Win7"></a>Windows Server 2008R2</span></td>
+    <td><b>Internet Explorer on Windows Server 2008 R2 or Windows 7 Professional 64-bit operating systems:</b> When accessing the InTouch Access Anywhere server through an RDP desktop session, user input animations using the Windows operating system keyboard do not start the keyboard. The recommended workaround is to use the device's built-in keyboard. 542851.
+	</td>
+  </tr>
+  -->
+  <a name="ITAA_combo">
+  <tr>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold"><a name="ITAA_all"></a>All&nbsp;Operating&nbsp;Systems</span></td>
+    <td><b>Firefox:</b> Values entered using the InTouch keyboard appear twice. TFS542896.
+	</td>
+  </tr>
+ <tr>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold"></span></td>
+    <td><b>Internet Explorer 10, Safari 8:</b> Playsound() works with Chrome, Opera, and Firefox, but not with Internet Explorer 10 or Safari 8. L00133687.
+	</td>
+  </tr>
+ <tr>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold"></span></td>
+    <td><b>Internet Explorer</b>: When accessing the InTouch Access Anywhere server through an RDP desktop session, user input animations using the Windows operating system keyboard do not start the keyboard. The recommended workaround is to use the device's built-in keyboard. TFS542851.
+	</td>
+ </tr>
+ <tr>
+    <td style="VERTICAL-ALIGN: top"><span style="FONT-WEIGHT: bold"></span></td>
+    <td>InTouch Access Anywhere sessions are randomly disconnected. L00139175, L00132897.
+	</td>
+ </tr>
+  
+  
+</TBODY>
+</TABLE>
+
+<H1><A name="ITAA_Documentation"></A>Wonderware InTouch Access Anywhere Documentation </H1>
+<p>Wonderware InTouch Access Anywhere product documentation is provided as a set of Portable Document Files (PDF): </p>
+<ul>
+<li>InTouch_Access_Anywhere_Admin_Manual.pdf</li>
+<li>InTouch_Access_Anywhere_Secure_Gateway.pdf</li>
+<li>ITAA_UserManual.pdf</li>
+</ul>
+<p>You need Adobe Reader installed on your computer to view InTouch documentation. You can download the 
+latest version of Adobe Reader from the Adobe Corporation web site: <A 
+href="http://www.adobe.com/products/acrobat/readstep2.html">http://www.adobe.com/products/acrobat/readstep2.html</A>.</p>
+<p>After installing Adobe Reader, double-click a PDF file with your pointing 
+device to view the book with Adobe Reader. You can also open a PDF with the 
+Adobe Reader <SPAN style="FONT-WEIGHT: bold">Open</SPAN> command from the <SPAN 
+style="FONT-WEIGHT: bold">File</SPAN> menu.</p> 
+
+<p></p>
+<HR>
+<P></P>
+<p>The Access Anywhere software is licensed pursuant to the terms and conditions contained in the enclosed Ericom Software Ltd. End User License Agreement.</p>	
+<p>&nbsp;</p><p>&nbsp;</p>
+<!--<p style="color: red; TEXT-ALIGN: center; font-size: 14pt">*** BETA DRAFT - NOT FOR EXTERNAL RELEASE ***</p>-->
+<p>&copy; 2015 Schneider Electric Software, LLC. All rights reserved.</p>
+
+</body>
+</html>          
